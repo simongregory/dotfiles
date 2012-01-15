@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+# Nip to github in your default browser.
+#
+# If you're inside a repo whose origin is github
+# then you'll end up looking at it on the github
+# site. Only known to work with git version 1.7.5.1
+#
+
+info = `git info`
+print "Not a git repository, " if info =~ /Not a git repository/
+
+remote_regex = /== Remote URL:\s+origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)\.git/
+repo = info.match(remote_regex)[2] rescue ''
+
+go_to = "https://github.com/#{repo}"
+puts "opening: #{go_to}"
+
+`open #{go_to}`

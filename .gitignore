@@ -1,0 +1,34 @@
+# ignore everything
+*
+# except:
+!.gitignore
+!.tm_properties
+!bash
+!bash/aliases.sh
+!bash/bash_profile.symlink
+!bash/bash_prompt.symlink
+!bash/completion.sh
+!bash/env.sh
+!bash/functions.sh
+!bin
+!bin/git-delete-local-merged
+!bin/git-rank-contributers
+!bin/git-wtf
+!bin/gitio
+!bin/hub
+!git
+!git/gitconfig
+!git/gitignore.symlink
+!lib
+!lib/bbc_project_completion.rb
+!lib/git_completion
+!lib/project_completion.rb
+!lib/rake_completion.rb
+!lib/tm_bundle_completion.rb
+!LICENSE
+!osx
+!osx/set-defaults.sh
+!Rakefile
+!README.md
+!tm
+!tm/tm_properties.symlink

@@ -1,0 +1,34 @@
+# Prompt
+if [ -f ~/.bash_prompt ]; then
+  source ~/.bash_prompt
+fi
+
+# Keep secrets in here
+if [[ -f ~/.bash_hush_hush ]]; then
+  source ~/.bash_hush_hush
+fi
+
+bash_config=~/.dotfiles/bash
+
+if [ -f $bash_config/env.sh ]; then
+  source $bash_config/env.sh
+fi
+
+if [ -f $bash_config/aliases.sh ]; then
+  source $bash_config/aliases.sh
+fi
+
+if [ -f $bash_config/functions.sh ]; then
+  source $bash_config/functions.sh
+fi
+
+if [ -f $bash_config/completion.sh ]; then
+  source $bash_config/completion.sh
+fi
+
+unset bash_config
+
+PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*

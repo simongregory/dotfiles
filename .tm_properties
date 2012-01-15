@@ -1,0 +1,8 @@
+[ "{git_completion,bash_profile.symlink,bash_prompt.symlink}" ]
+fileType         = "source.shell"
+
+[ "LICENSE" ]
+fileType         = "text.plain"
+
+[ "tm_properties.symlink" ]
+fileType         = "source.tm-properties"
