@@ -6,3 +6,6 @@ fileType         = "text.plain"
 
 [ "tm_properties.symlink" ]
 fileType         = "source.tm-properties"
+
+[ "{gitconfig,gitignore.symlink}" ]
+fileType         = "source.git-config"
