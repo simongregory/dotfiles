@@ -35,13 +35,13 @@ function ql {
 }
 
 function iphone {
-	_set_proxies "http://siphone.local:1080" #the socks address dispalyed in iProxy
+  _set_proxies "http://siphone.local:1080" #the socks address dispalyed in iProxy
   echo "Proxy set for iProxy: $HTTP_PROXY"
 }
 
 function reith {
-	_set_proxies "http://www-cache.reith.bbc.co.uk:80"
-	echo "Proxy set for reith: $HTTP_PROXY"
+  _set_proxies "http://www-cache.reith.bbc.co.uk:80"
+  echo "Proxy set for reith: $HTTP_PROXY"
 }
 
 function clear_proxy {
@@ -50,13 +50,13 @@ function clear_proxy {
 }
 
 function _set_proxies() {
-	http_proxy=$1
-	HTTP_PROXY=$1
-	https_proxy=$1
-	HTTPS_PROXY=$1
-	export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
+  http_proxy=$1
+  HTTP_PROXY=$1
+  https_proxy=$1
+  HTTPS_PROXY=$1
+  export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
 
-	no_proxy='10.*,.gateway.bbc.co.uk,.core.bbc.co.uk,localhost'
-	NO_PROXY=$no_proxy
-	export no_proxy NO_PROXY
+  no_proxy='10.*,.gateway.bbc.co.uk,.core.bbc.co.uk,localhost'
+  NO_PROXY=$no_proxy
+  export no_proxy NO_PROXY
 }

@@ -6,7 +6,7 @@ alias cuke="bundle exec cucumber"
 
 #always use color output for `ls` via @gf3
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-	alias ls="command ls -G"
+  alias ls="command ls -G"
 fi
 
 # List all files colorized in long format, including dot files
@@ -18,6 +18,7 @@ alias fs="stat -f \"%z bytes\""
 #in-here
 alias h="cd ~/"
 alias ipd="cd ~/ipd/v5/"
+alias gel="cd ~/ipd/gel/"
 alias dot="cd ~/.dotfiles"
 
 #out-there

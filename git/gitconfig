@@ -1,36 +1,36 @@
 [user]
-	name = Simon Gregory
-	email = EMAIL
+  name = Simon Gregory
+  email = EMAIL
 [github]
-	user = simongregory
-	token = TOKEN
+  user = simongregory
+  token = TOKEN
 [core]
-	editor = mate -w
-	excludesfile = /Users/simon/.gitignore
-	autocrlf = input
-	whitespace = fix,trailing-space,space-before-tab
-	quotepath = false
+  editor = mate -w
+  excludesfile = /Users/simon/.gitignore
+  autocrlf = input
+  whitespace = fix,trailing-space,space-before-tab
+  quotepath = false
 [apply]
   whitespace = fix
 [alias]
-	st = status
-	ci = commit
-	br = branch
-	co = checkout
-	df = diff
-	dt = difftool
-	pu = pull
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dt = difftool
+  pu = pull
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
 [difftool]
-	prompt = false
+  prompt = false
 [diff]
-	tool = Kaleidoscope
-	mnemonicprefix = true
+  tool = Kaleidoscope
+  mnemonicprefix = true
 [color]
-	ui = auto
+  ui = auto
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 # [svn]
 #     authorsfile = /Users/simon/.git-svn-authors
