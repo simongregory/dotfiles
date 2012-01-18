@@ -9,7 +9,7 @@ export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
 export HUDSON_HOME=~/code/hudson
 export FLEX_HOME="$HOME/Library/Sprouts/1.1/cache/flex4/4.5.1.21328"
-export SPROUT_GENERATORS="$HOME/code/sprout/sprout-templates/bbc"
+export SPROUT_GENERATORS="$HOME/code/sprout-templates/bbc"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
