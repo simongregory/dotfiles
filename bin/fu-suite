@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+# If you've got a lot of FlexUnit tests, then waiting for the
+# whole test-compile-run merry-go-round can send you to sleep.
+#
+# Using git we take a look at the changed files in the project
+# then create a slimmed down test suite focusing on changed
+# files.
+#
+# This scrappy script is just selotape to test out the idea.
+# If I find it handy then it'll get cleaned up and moved
+# over to the flexunit gem.
+
+dir = Dir.pwd
+
+def is_fu_project? path
+  File.exist?("#{path}/src") and File.exist?("#{path}/test")
+end
+
+def git_status
+  `git status`.split("\n")
+end
+
+unless is_fu_project? dir
+  puts "No src or test directories found in current directory"
+  exit 0;
+end
+
+tracked_changes = /#	(modified|renamed|new file):\s+\b(.*\.(as|mxml))/
+untracked_changes = /#\s([\w.\/]+\.(as|mxml))/
+
+changed_files = []
+testable_files = []
+testable_classes = []
+
+git_status.each { |line|
+  if line =~ tracked_changes
+    changed_files << $2.split(' -> ')
+  elsif line =~ untracked_changes
+    changed_files << $1
+  end
+}
+
+changed_files.flatten.uniq.each { |path|
+  if path =~ /^src/
+    path.sub!(/^src/,'test')
+    path.sub!(/\b(.+).as/, "\\1Test.as")
+  end
+
+  testable_files << "#{dir}/#{path}" if File.exist?("#{dir}/#{path}")
+}
+
+testable_files.each { |path|
+  path.sub!(/^.*test\//,'')
+  path.sub!(/\.as$/,'')
+  path.gsub!(/\//,'.')
+  testable_classes << path unless path.include?('AllTests')
+}
+
+suite = "package\n{\n"
+testable_classes.each { |c| suite << "import #{c};\n" }
+suite << "\n[Suite]\n[RunWith(\"org.flexunit.runners.Suite\")]\n"
+suite << "public class AllTests\n{\n"
+testable_classes.each { |c| suite << "    public var #{c.gsub('.','_')}:#{c};\n" }
+suite << "}\n}\n"
+
+File.open("#{dir}/test/AllTests.as", 'w') {|f| f.write(suite) }
+
+exit 0

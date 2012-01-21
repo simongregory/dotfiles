@@ -11,6 +11,7 @@
 !bash/env.sh
 !bash/functions.sh
 !bin
+!bin/fu-suite
 !bin/git-delete-local-merged
 !bin/git-rank-contributers
 !bin/git-wtf
