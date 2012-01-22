@@ -58,7 +58,7 @@ testable_files.each { |path|
 }
 
 suite = "package\n{\n"
-testable_classes.each { |c| suite << "import #{c};\n" }
+testable_classes.uniq!.each { |c| suite << "import #{c};\n" }
 suite << "\n[Suite]\n[RunWith(\"org.flexunit.runners.Suite\")]\n"
 suite << "public class AllTests\n{\n"
 testable_classes.each { |c| suite << "    public var #{c.gsub('.','_')}:#{c};\n" }
