@@ -20,6 +20,8 @@ alias h="cd ~/"
 alias ipd="cd ~/ipd/v5/"
 alias gel="cd ~/ipd/gel/"
 alias dot="cd ~/.dotfiles"
+alias desktop="cd ~/Desktop"
+alias downloads="cd ~/Downloads"
 
 #out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
