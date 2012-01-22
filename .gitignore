@@ -31,5 +31,7 @@
 !osx/set-defaults.sh
 !Rakefile
 !README.md
+!ruby
+!ruby/gemrc.symlink
 !tm
 !tm/tm_properties.symlink
