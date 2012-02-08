@@ -7,10 +7,10 @@ spellingLanguage = 'en_GB'
 spellChecking    = true
 spellingLanguage = 'en_GB'
 
-[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib,giff,mp4,swf,swc,fla,swf.cache} ]
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib,giff,mp4,swf,swc,fla,cache} ]
 binary           = true
 
-[ "{Gemfile,Rakefile}" ]
+[ "{Gemfile,Rakefile,buildfile}" ]
 fileType         = "source.ruby"
 
 [ "{LICENSE,CHANGELOG}" ]
