@@ -54,7 +54,9 @@ function _set_proxies() {
   HTTP_PROXY=$1
   https_proxy=$1
   HTTPS_PROXY=$1
-  export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
+  ALL_PROXY=$1
+
+  export http_proxy HTTP_PROXY https_proxy HTTPS_PROXY ALL_PROXY
 
   no_proxy='10.*,.gateway.bbc.co.uk,.core.bbc.co.uk,localhost'
   NO_PROXY=$no_proxy
