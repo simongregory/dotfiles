@@ -59,11 +59,17 @@ testable_files.each { |path|
 }
 
 testable_classes.uniq! if testable_classes.length > 1
+
+puts "Creating AllTests.as"
+
 suite = "package\n{\n"
-testable_classes.uniq!.each { |c| suite << "import #{c};\n" }
+testable_classes.each { |c| suite << "import #{c};\n" }
 suite << "\n[Suite]\n[RunWith(\"org.flexunit.runners.Suite\")]\n"
 suite << "public class AllTests\n{\n"
-testable_classes.each { |c| suite << "    public var #{c.gsub('.','_')}:#{c};\n" }
+testable_classes.each { |c|
+  suite << "    public var #{c.gsub('.','_')}:#{c};\n"
+  puts "  Adding #{c}"
+}
 suite << "}\n}\n"
 
 File.open("#{dir}/test/AllTests.as", 'w') {|f| f.write(suite) }
