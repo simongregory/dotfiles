@@ -17,8 +17,9 @@ def is_fu_project? path
   File.exist?("#{path}/src") and File.exist?("#{path}/test")
 end
 
+#TODO: Re-jig to use --porcelain mode
 def git_status
-  `git status`.split("\n")
+  `git status -u`.split("\n")
 end
 
 unless is_fu_project? dir
@@ -57,6 +58,7 @@ testable_files.each { |path|
   testable_classes << path unless path.include?('AllTests')
 }
 
+testable_classes.uniq! if testable_classes.length > 1
 suite = "package\n{\n"
 testable_classes.uniq!.each { |c| suite << "import #{c};\n" }
 suite << "\n[Suite]\n[RunWith(\"org.flexunit.runners.Suite\")]\n"
