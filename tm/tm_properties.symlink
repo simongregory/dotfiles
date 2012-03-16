@@ -13,7 +13,7 @@ binary           = true
 [ "{Gemfile,Rakefile,buildfile}" ]
 fileType         = "source.ruby"
 
-[ "{LICENSE,CHANGELOG}" ]
+[ "{LICENSE,CHANGELOG,BACKLOG}" ]
 fileType         = "text.plain"
 
 [ source ]
