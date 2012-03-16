@@ -18,14 +18,14 @@ function tm {
 
 function bbc {
   bbc_code=~/bbc/$1
-  ipd_code=~/ipd/$1
+  ip_code=~/ip/$1
 
   if test -d "$bbc_code"
   then
     cd "$bbc_code";
-  elif test -d "$ipd_code"
+  elif test -d "$ip_code"
   then
-    cd "$ipd_code";
+    cd "$ip_code";
   fi
 }
 

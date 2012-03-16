@@ -18,8 +18,10 @@ alias fs="stat -f \"%z bytes\""
 
 #in-here
 alias h="cd ~/"
-alias ipd="cd ~/ipd/v5/"
-alias gel="cd ~/ipd/gel/"
+alias ip="cd ~/ip/"
+alias ipd="cd ~/ip/ipd/"
+alias imp="cd ~/ip/imp/"
+alias gel="cd ~/ip/gel/"
 alias dot="cd ~/.dotfiles"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"

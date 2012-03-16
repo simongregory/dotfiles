@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# Lists all files in ~/bbc and ~/ipd when invoked
+# Lists all files in ~/bbc and ~/ip when invoked
 # with `bbc `tab-tab
 #
 # See completions.sh then functions.sh to see
@@ -23,7 +23,7 @@ class BBCProjectCompletion
   end
 
   def projects
-    `ls ~/bbc/`.split + `ls ~/ipd/`.split
+    `ls ~/bbc/`.split + `ls ~/ip/`.split
   end
 end
 
