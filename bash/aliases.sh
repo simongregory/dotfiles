@@ -3,6 +3,7 @@ alias g=git
 alias m="mate ."
 alias rk="bundle exec rake"
 alias cuke="bundle exec cucumber"
+alias puke="bundle exec cucumber --format progress"
 
 #always use color output for `ls` via @gf3
 if [[ "$OSTYPE" =~ ^darwin ]]; then
