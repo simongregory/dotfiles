@@ -55,8 +55,7 @@ testable_files.each { |path|
   path.sub!(/^.*test\//,'')
   path.sub!(/\.as$/,'')
   path.gsub!(/\//,'.')
-  #testable_classes << path unless path.include?('AllTests') #Was being too inclusive and picking up fixtures.
-  testable_classes << path if path =~ /(\/Test|Test$)/ #might be too restrictive...
+  testable_classes << path unless path.include?('AllTests')
 }
 
 testable_classes.uniq! if testable_classes.length > 1
