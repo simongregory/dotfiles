@@ -8,7 +8,7 @@ export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
 export HUDSON_HOME=~/code/hudson
-export FLEX_HOME="$HOME/Library/Sprouts/1.1/cache/flex4/4.5.1.21328"
+#export FLEX_HOME="$HOME/Library/Sprouts/1.1/cache/flex4/4.5.1.21328"
 export SPROUT_GENERATORS="$HOME/code/sprout-templates/bbc"
 
 # Larger bash history (allow 32³ entries; default is 500)
@@ -20,5 +20,7 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # For HTTP_PROXY, HTTPS_PROXY and NO_PROXY etc see functions.sh
 
+export SIKULI_SERVER_JAR=/Users/Simon/ip/imp/lib/java/server-mac-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+
 #rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
