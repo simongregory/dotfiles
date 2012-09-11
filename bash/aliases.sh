@@ -40,3 +40,4 @@ alias int-ci="open https://ci-pal.int.bbc.co.uk/hudson/job/imp/"
 #random
 alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"
 alias reloadbundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
+alias pyserve="python -m SimpleHTTPServer"
