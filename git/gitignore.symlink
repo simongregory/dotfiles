@@ -2,7 +2,7 @@
 
 # Compiled source #
 ###################
-*.com
+*.com                 #Negate with !*.com (ie for simongregory.com)
 *.class
 *.dll
 *.exe
