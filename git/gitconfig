@@ -21,6 +21,7 @@
   dt = difftool
   pu = pull
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  wc = whatchanged -p --abbrev-commit --pretty=medium
 [branch]
   autosetupmerge = true
 [difftool]
