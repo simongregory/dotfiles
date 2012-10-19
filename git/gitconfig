@@ -3,7 +3,6 @@
   email = EMAIL
 [github]
   user = simongregory
-  token = TOKEN
 [core]
   editor = mate -w
   excludesfile = /Users/simon/.gitignore
@@ -33,5 +32,3 @@
   ui = auto
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-# [svn]
-#     authorsfile = /Users/simon/.git-svn-authors
