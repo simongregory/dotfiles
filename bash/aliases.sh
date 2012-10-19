@@ -29,9 +29,6 @@ alias downloads="cd ~/Downloads"
 
 #out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
-alias amazon="open http://www.amazon.co.uk/"
-alias google="open http://www.google.co.uk/"
-
 alias hudson="open https://ci-pal.test.bbc.co.uk/hudson/job/imp/"
 
 #random

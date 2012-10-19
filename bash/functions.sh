@@ -62,3 +62,18 @@ function _set_proxies() {
   NO_PROXY=$no_proxy
   export no_proxy NO_PROXY
 }
+
+#search amazon.co.uk for...
+function amazon() { 
+  open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$1";
+}
+
+#search google within the last month...
+function google() { 
+  open "http://www.google.co.uk/#q=$1&hl=en&tbo=1&output=search&tbs=qdr:m";
+}
+
+#search google maps for...
+function maps() { 
+  open "http://maps.google.co.uk/?q=$1";
+}
