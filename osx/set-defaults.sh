@@ -263,6 +263,13 @@ defaults write com.apple.iTunes disablePing -bool true
 #defaults write com.apple.iTunes disableRadio -bool true
 
 ###############################################################################
+# TextMate                                                                    #
+###############################################################################
+
+# Switch off anit aliasing in TextMate
+defaults write com.macromates.TextMate.preview disableAntiAlias -bool YES
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
