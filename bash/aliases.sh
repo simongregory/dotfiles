@@ -26,6 +26,8 @@ alias gel="cd ~/ip/gel-pure/"
 alias dot="cd ~/.dotfiles"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
+alias ..="cd .."
+alias ...="cd ../.."
 
 #out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
