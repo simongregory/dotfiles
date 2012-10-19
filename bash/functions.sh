@@ -2,7 +2,7 @@
 function c { cd ~/code/$1; }
 
 # short cutting to TextMate bundle directories -
-# the one's bundle authors are going to be using.
+# the ones bundle authors are going to be using
 function tm {
   avian_bundle=~/Library/Application\ Support/Avian/Bundles/$1
   tm_bundle=~/Library/Application\ Support/TextMate/Bundles/$1
@@ -76,4 +76,9 @@ function google() {
 #search google maps for...
 function maps() { 
   open "http://maps.google.co.uk/?q=$1";
+}
+
+#open man pages in Preview
+function pman() {
+  man $1 -t | open -f -a Preview;
 }
