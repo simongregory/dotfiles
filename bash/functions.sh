@@ -1,47 +1,48 @@
 # changing directory to code project
-function c { cd ~/code/$1; }
+#function c { cd ~/code/$1; }
 
 # short cutting to TextMate bundle directories -
 # the ones bundle authors are going to be using
-function tm {
-  avian_bundle=~/Library/Application\ Support/Avian/Bundles/$1
-  tm_bundle=~/Library/Application\ Support/TextMate/Bundles/$1
-
-  if test -d "$avian_bundle"
-  then
-    cd "$avian_bundle";
-  elif test -d "$tm_bundle"
-  then
-    cd "$tm_bundle";
-  fi
-}
-
-function bbc {
-  bbc_code=~/bbc/$1
-  ip_code=~/ip/$1
-
-  if test -d "$bbc_code"
-  then
-    cd "$bbc_code";
-  elif test -d "$ip_code"
-  then
-    cd "$ip_code";
-  fi
-}
+# function tm {
+#   avian_bundle=~/Library/Application\ Support/Avian/Bundles/$1
+#   tm_bundle=~/Library/Application\ Support/TextMate/Bundles/$1
+# 
+#   if test -d "$avian_bundle"
+#   then
+#     cd "$avian_bundle";
+#   elif test -d "$tm_bundle"
+#   then
+#     cd "$tm_bundle";
+#   fi
+# }
+# 
+# function bbc {
+#   bbc_code=~/bbc/$1
+#   ip_code=~/ip/$1
+# 
+#   if test -d "$bbc_code"
+#   then
+#     cd "$bbc_code";
+#   elif test -d "$ip_code"
+#   then
+#     cd "$ip_code";
+#   fi
+# }
 
 #quicklook at..
 function ql {
   qlmanage -p $1 &>/dev/null
 }
 
-function iphone {
-  _set_proxies "http://siphone.local:1080" #the socks address dispalyed in iProxy
-  echo "Proxy set for iProxy: $HTTP_PROXY"
-}
-
 function reith {
+  scselect "BBC On Network"
   _set_proxies "http://www-cache.reith.bbc.co.uk:80"
   echo "Proxy set for reith: $HTTP_PROXY"
+}
+
+function off_reith {
+  scselect "BBC Off Network"
+  clear_proxy
 }
 
 function clear_proxy {
@@ -60,6 +61,7 @@ function _set_proxies() {
 
   no_proxy='10.*,.gateway.bbc.co.uk,.core.bbc.co.uk,localhost'
   NO_PROXY=$no_proxy
+  
   export no_proxy NO_PROXY
 }
 

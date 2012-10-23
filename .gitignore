@@ -35,3 +35,15 @@
 !ruby/gemrc.symlink
 !tm
 !tm/tm_properties.symlink
+!zsh
+!zsh/config.zsh
+!zsh/prompt.zsh
+!zsh/zshrc.symlink
+!zsh/functions
+!zsh/functions/_brew
+!zsh/functions/_c
+!zsh/functions/_h
+!zsh/functions/_rake
+!zsh/functions/c
+!zsh/functions/h
+!zsh/functions/smartextract

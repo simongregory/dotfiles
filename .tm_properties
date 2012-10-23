@@ -1,4 +1,4 @@
-[ "{git_completion,bash_profile.symlink,bash_prompt.symlink}" ]
+[ "{git_completion,bash_profile.symlink,bash_prompt.symlink,zshrc.symlink}" ]
 fileType         = "source.shell"
 
 [ "LICENSE" ]

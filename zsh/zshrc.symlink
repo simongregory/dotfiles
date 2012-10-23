@@ -1,0 +1,49 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# Where all the code lives
+export PROJECTS=$HOME/ip
+
+# RVM
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+# Load colours so we don't have to remember the crazy codes
+autoload -U colors
+colors
+setopt prompt_subst
+
+# Manually load in zsh config files for now ⚡
+source $ZSH/zsh/config.zsh
+source $ZSH/zsh/prompt.zsh
+
+source $ZSH/bash/aliases.sh
+source $ZSH/bash/functions.sh
+
+# Load completions for Ruby, Git, etc.
+# When making changes to completions clear the completions cache 
+# using rm ~/.zcompdump
+autoload -U compinit
+compinit
+
+# matches case insensitive for lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# pasting with tabs doesn't perform completion
+zstyle ':completion:*' insert-tab pending
+
+# cache completions to speed things up
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# prevent cvs files from being completed
+zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
+zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
+
+# load completions after autocomplete loads
+source $ZSH/git/completion.zsh
+
+# alias git to g and let completions know
+alias g='git'
+compdef g=git
+
+PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
