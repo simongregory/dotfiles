@@ -35,6 +35,9 @@
 !README.md
 !ruby
 !ruby/gemrc.symlink
+!sublime
+!sublime/Preferences.sublime-settings
+!sublime/sublime-setup.sh
 !tm
 !tm/tm_properties.symlink
 !zsh
