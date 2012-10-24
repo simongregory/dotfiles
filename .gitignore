@@ -19,6 +19,7 @@
 !bin/hub
 !git
 !git/gitconfig
+!git/completion.zsh
 !git/gitignore.symlink
 !lib
 !lib/bbc_project_completion.rb
