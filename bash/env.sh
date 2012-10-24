@@ -3,7 +3,7 @@ export LC_CTYPE=en_US.UTF-8
 
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-export EDITOR="$HOME/bin/mate -w"
+export EDITOR="/usr/local/bin/mate -w"
 export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
