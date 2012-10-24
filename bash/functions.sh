@@ -6,7 +6,7 @@
 # function tm {
 #   avian_bundle=~/Library/Application\ Support/Avian/Bundles/$1
 #   tm_bundle=~/Library/Application\ Support/TextMate/Bundles/$1
-# 
+#
 #   if test -d "$avian_bundle"
 #   then
 #     cd "$avian_bundle";
@@ -15,11 +15,11 @@
 #     cd "$tm_bundle";
 #   fi
 # }
-# 
+#
 # function bbc {
 #   bbc_code=~/bbc/$1
 #   ip_code=~/ip/$1
-# 
+#
 #   if test -d "$bbc_code"
 #   then
 #     cd "$bbc_code";
@@ -61,22 +61,22 @@ function _set_proxies() {
 
   no_proxy='10.*,.gateway.bbc.co.uk,.core.bbc.co.uk,localhost'
   NO_PROXY=$no_proxy
-  
+
   export no_proxy NO_PROXY
 }
 
 #search amazon.co.uk for...
-function amazon() { 
+function amazon() {
   open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$1";
 }
 
 #search google within the last month...
-function google() { 
+function google() {
   open "http://www.google.co.uk/#q=$1&hl=en&tbo=1&output=search&tbs=qdr:m";
 }
 
 #search google maps for...
-function maps() { 
+function maps() {
   open "http://maps.google.co.uk/?q=$1";
 }
 
