@@ -17,6 +17,7 @@
 !bin/git-wtf
 !bin/gitio
 !bin/hub
+!bin/subl
 !git
 !git/gitconfig
 !git/completion.zsh
