@@ -1,6 +1,4 @@
 #tool micro-cuts
-#alias g=git
-alias m="mate ."
 alias rk="bundle exec rake"
 alias cuke="bundle exec cucumber"
 alias puke="bundle exec cucumber --format progress"
@@ -10,8 +8,8 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
   alias ls="command ls -G"
 fi
 
-#List all files colorized in long format, without groups, 
-#with dot files, appending / for dirs, and displaying 
+#List all files colorized in long format, without groups,
+#with dot files, appending / for dirs, and displaying
 #file sizes in bytes,kb,mb and gb
 alias la="ls -Gahop"
 

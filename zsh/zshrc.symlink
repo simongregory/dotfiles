@@ -20,7 +20,7 @@ source $ZSH/bash/aliases.sh
 source $ZSH/bash/functions.sh
 
 # Load completions for Ruby, Git, etc.
-# When making changes to completions clear the completions cache 
+# When making changes to completions clear the completions cache
 # using rm ~/.zcompdump
 autoload -U compinit
 compinit
@@ -45,5 +45,8 @@ source $ZSH/git/completion.zsh
 # alias git to g and let completions know
 alias g='git'
 compdef g=git
+
+alias m="mate ."
+alias s="subl ."
 
 PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
