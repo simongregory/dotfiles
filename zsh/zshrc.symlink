@@ -12,7 +12,9 @@ autoload -U colors
 colors
 setopt prompt_subst
 
-# Manually load in zsh config files for now ⚡
+#⚡ ✖ ✔
+
+# Manually load in zsh config files for now
 source $ZSH/zsh/config.zsh
 source $ZSH/zsh/prompt.zsh
 
@@ -49,6 +51,8 @@ compdef g=git
 alias m="mate ."
 alias s="subl ."
 
-PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
+
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+
 eval "$(rbenv init -)"
