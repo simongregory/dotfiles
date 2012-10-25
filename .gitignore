@@ -17,6 +17,7 @@
 !bin/git-wtf
 !bin/gitio
 !bin/hub
+!bin/lyrics
 !bin/subl
 !git
 !git/gitconfig
