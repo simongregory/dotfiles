@@ -48,9 +48,14 @@ source $ZSH/git/completion.zsh
 alias g='git'
 compdef g=git
 
+# alias rake to rk and let completions know
+alias rk='rake'
+compdef rk=rake
+
 alias m="mate ."
 alias s="subl ."
 
+alias reload!='. ~/.zshrc'
 alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
 
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"

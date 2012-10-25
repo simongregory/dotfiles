@@ -1,5 +1,5 @@
 #tool micro-cuts
-alias rk="bundle exec rake"
+#alias rk="bundle exec rake"
 alias cuke="bundle exec cucumber"
 alias puke="bundle exec cucumber --format progress"
 
