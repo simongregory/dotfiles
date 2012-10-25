@@ -38,8 +38,8 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%~%\/%{$reset_color%}"
 }
 
-# precmd() {
-#  print -Pn "\e]0;%~\a"
-# }
+precmd() {
+  print -Pn "\e]0;%~\a"
+}
 
 PROMPT=$'$(directory_name) $(git_dirty)$(need_push)\n> '
