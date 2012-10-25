@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # Where all the code lives
-export PROJECTS=$HOME/ip
+export PROJECTS=$HOME/Code
 
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
