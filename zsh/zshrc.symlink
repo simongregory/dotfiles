@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles
 export PROJECTS=$HOME/Code
 
 # RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+#if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 # Load colours so we don't have to remember the crazy codes
 autoload -U colors
@@ -50,3 +50,5 @@ alias m="mate ."
 alias s="subl ."
 
 PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+eval "$(rbenv init -)"
