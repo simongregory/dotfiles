@@ -41,6 +41,7 @@
 !sublime/sublime-setup.sh
 !tm
 !tm/tm_properties.symlink
+!tm/tm_setup.sh
 !zsh
 !zsh/config.zsh
 !zsh/prompt.zsh
@@ -50,6 +51,8 @@
 !zsh/functions/_c
 !zsh/functions/_h
 !zsh/functions/_rake
+!zsh/functions/_tm
 !zsh/functions/c
 !zsh/functions/h
+!zsh/functions/tm
 !zsh/functions/smartextract
