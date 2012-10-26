@@ -6,7 +6,24 @@ function ql {
 function reith {
   scselect "BBC On Network"
   _set_proxies "http://www-cache.reith.bbc.co.uk:80"
+  _svn_on_reith
   echo "Proxy set for reith: $HTTP_PROXY"
+}
+
+function _svn_on_reith {
+  svn_servers="$HOME/.subversion/servers"
+  if [[ -f "$svn_servers" ]]
+  then
+    sed -i "" 's/#http-proxy-host = www-cache\.reith\.bbc\.co\.uk/http-proxy-host = www-cache\.reith\.bbc\.co\.uk/' "$svn_servers"
+  fi
+}
+
+function _svn_off_reith {
+  svn_servers="$HOME/.subversion/servers"
+  if [[ -f "$svn_servers" ]]
+  then
+    sed -i "" 's/http-proxy-host = www-cache\.reith\.bbc\.co\.uk/#http-proxy-host = www-cache\.reith\.bbc\.co\.uk/' "$svn_servers"
+  fi
 }
 
 function off_reith {
@@ -16,6 +33,7 @@ function off_reith {
 
 function clear_proxy {
   unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
+  _svn_off_reith
   echo "Proxy settings cleared"
 }
 
