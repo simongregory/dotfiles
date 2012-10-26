@@ -1,13 +1,6 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
-# Where all the code lives
-export PROJECTS=$HOME/Code
-export SPROUT_GENERATORS="$PROJECTS/sprout-templates/bbc"
-
-# RVM
-#if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-
 # Load colours so we don't have to remember the crazy codes
 autoload -U colors
 colors
@@ -15,12 +8,12 @@ setopt prompt_subst
 
 #⚡ ✖ ✔
 
-# Manually load in zsh config files for now
+# Load in config files
+source $ZSH/zsh/env.zsh
 source $ZSH/zsh/config.zsh
 source $ZSH/zsh/prompt.zsh
-
-source $ZSH/bash/aliases.sh
-source $ZSH/bash/functions.sh
+source $ZSH/zsh/aliases.zsh
+source $ZSH/zsh/functions.zsh
 
 # Load completions for Ruby, Git, etc.
 # When making changes to completions clear the completions cache
@@ -44,20 +37,6 @@ zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
 
 # load completions after autocomplete loads
 source $ZSH/git/completion.zsh
-
-# alias git to g and let completions know
-alias g='git'
-compdef g=git
-
-# alias rake to rk and let completions know
-alias rk='rake'
-compdef rk=rake
-
-alias m="mate ."
-alias s="subl ."
-
-alias reload!='. ~/.zshrc'
-alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
 
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
 
