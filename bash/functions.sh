@@ -1,34 +1,3 @@
-# changing directory to code project
-#function c { cd ~/code/$1; }
-
-# short cutting to TextMate bundle directories -
-# the ones bundle authors are going to be using
-# function tm {
-#   avian_bundle=~/Library/Application\ Support/Avian/Bundles/$1
-#   tm_bundle=~/Library/Application\ Support/TextMate/Bundles/$1
-#
-#   if test -d "$avian_bundle"
-#   then
-#     cd "$avian_bundle";
-#   elif test -d "$tm_bundle"
-#   then
-#     cd "$tm_bundle";
-#   fi
-# }
-#
-# function bbc {
-#   bbc_code=~/bbc/$1
-#   ip_code=~/ip/$1
-#
-#   if test -d "$bbc_code"
-#   then
-#     cd "$bbc_code";
-#   elif test -d "$ip_code"
-#   then
-#     cd "$ip_code";
-#   fi
-# }
-
 #quicklook at..
 function ql {
   qlmanage -p $1 &>/dev/null
