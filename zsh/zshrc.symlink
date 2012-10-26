@@ -3,6 +3,7 @@ export ZSH=$HOME/.dotfiles
 
 # Where all the code lives
 export PROJECTS=$HOME/Code
+export SPROUT_GENERATORS="$PROJECTS/sprout-templates/bbc"
 
 # RVM
 #if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
