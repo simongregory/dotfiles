@@ -54,12 +54,16 @@ function _set_proxies() {
 
 #search amazon.co.uk for...
 function amazon() {
-  open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$1";
+  term="$@"
+  search=$(php -r "echo rawurlencode('$term');")
+  open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$search";
 }
 
 #search google within the last month...
 function google() {
-  open "http://www.google.co.uk/#q=$1&hl=en&tbo=1&output=search&tbs=qdr:m";
+  term="$@"
+  search=$(php -r "echo rawurlencode('$term');")
+  open "http://www.google.co.uk/#q=$search&hl=en&tbo=1&output=search&tbs=qdr:m";
 }
 
 #search google maps for...
