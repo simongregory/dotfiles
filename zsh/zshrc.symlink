@@ -12,7 +12,6 @@ setopt prompt_subst
 source $ZSH/zsh/env.zsh
 source $ZSH/zsh/config.zsh
 source $ZSH/zsh/prompt.zsh
-source $ZSH/zsh/aliases.zsh
 source $ZSH/zsh/functions.zsh
 
 # Load completions for Ruby, Git, etc.
@@ -37,6 +36,7 @@ zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
 
 # load completions after autocomplete loads
 source $ZSH/git/completion.zsh
+source $ZSH/zsh/aliases.zsh
 
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
 
