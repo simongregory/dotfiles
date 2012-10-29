@@ -75,17 +75,3 @@ function maps() {
 function pman() {
   man $1 -t | open -f -a Preview;
 }
-
-#un/mute system volume
-function mute() {
-  osascript <<EOF
-  set volumeSettings to get volume settings
-  if output muted of volumeSettings is false then
-    set volume with output muted
-    copy "Volume muted" to stdout
-  else
-    set volume without output muted
-    copy "Volume un-muted" to stdout
-  end if
-EOF
-}

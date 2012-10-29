@@ -18,6 +18,7 @@
 !bin/gitio
 !bin/hub
 !bin/lyrics
+!bin/mute
 !bin/subl
 !git
 !git/gitconfig
