@@ -35,6 +35,7 @@ zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
 zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
 
 # load completions after autocomplete loads
+# source $ZSH/node/completion.zsh
 source $ZSH/git/completion.zsh
 source $ZSH/zsh/aliases.zsh
 

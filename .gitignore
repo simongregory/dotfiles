@@ -31,6 +31,9 @@
 !lib/rake_completion.rb
 !lib/tm_bundle_completion.rb
 !LICENSE
+!node
+!node/install.sh
+!node/completion.zsh
 !osx
 !osx/set-defaults.sh
 !Rakefile
