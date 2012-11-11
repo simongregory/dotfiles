@@ -66,6 +66,12 @@ function google() {
   open "http://www.google.co.uk/#q=$search&hl=en&tbo=1&output=search&tbs=qdr:m";
 }
 
+function wikipedia() {
+  term="$@"
+  search=$(php -r "echo rawurlencode('$term');")
+  open "http://en.wikipedia.org/w/index.php?title=Special:Search&search=$search"
+}
+
 #search google maps for...
 function maps() {
   open "http://maps.google.co.uk/?q=$1";
