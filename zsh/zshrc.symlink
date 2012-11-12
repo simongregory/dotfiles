@@ -20,6 +20,14 @@ source $ZSH/zsh/functions.zsh
 autoload -U compinit
 compinit
 
+# Good zsh completion background reading
+# man zshcompsys
+# http://zsh.sourceforge.net/Guide/zshguide06.html
+# http://www.linux-mag.com/id/1106/
+
+# List completions in rows, right to left
+setopt LIST_ROWS_FIRST
+
 # matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -30,9 +38,11 @@ zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-# prevent cvs files from being completed
-zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
-zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
+# Be vocal where there are no completion matches
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+
+# Allow menu style completion selection (ctrl-g to exit)
+zstyle ':completion:*' menu select=1
 
 # load completions after autocomplete loads
 # source $ZSH/node/completion.zsh
