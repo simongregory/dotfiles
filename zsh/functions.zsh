@@ -54,30 +54,44 @@ function _set_proxies() {
 
 #search amazon.co.uk for...
 function amazon() {
-  term="$@"
-  search=$(php -r "echo rawurlencode('$term');")
+  search=$(_url_encode "$@")
   open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$search";
 }
 
 #search google within the last month...
 function google() {
-  term="$@"
-  search=$(php -r "echo rawurlencode('$term');")
+  search=$(_url_encode "$@")
   open "http://www.google.co.uk/#q=$search&hl=en&tbo=1&output=search&tbs=qdr:m";
 }
 
 function wikipedia() {
-  term="$@"
-  search=$(php -r "echo rawurlencode('$term');")
+  search=$(_url_encode "$@")
   open "http://en.wikipedia.org/w/index.php?title=Special:Search&search=$search"
+}
+
+# Search wolfram alpha for...
+function wolfram () {
+  search=$(_url_encode "$@")
+  open "http://www.wolframalpha.com/input/?i=$search"
 }
 
 #search google maps for...
 function maps() {
-  open "http://maps.google.co.uk/?q=$1";
+  search=$(_url_encode "$@")
+  open "http://maps.google.co.uk/?q=$search";
+}
+
+function _url_encode (){
+  term="$@"
+  php -r "echo rawurlencode('$term');"
 }
 
 #open man pages in Preview
 function pman() {
   man $1 -t | open -f -a Preview;
+}
+
+#find from current dir
+function ffind() {
+  find . -name $1 -print
 }
