@@ -16,9 +16,6 @@ alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
 alias cuke="bundle exec cucumber"
 alias puke="bundle exec cucumber --format progress"
 
-# always use color output for ls
-alias ls="command ls -G"
-
 # List all files colorized in long format, without groups,
 # with dot files, appending / for dirs, and displaying
 # file sizes in bytes,kb,mb and gb
