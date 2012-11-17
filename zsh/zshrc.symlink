@@ -25,7 +25,7 @@ compinit
 # http://zsh.sourceforge.net/Guide/zshguide06.html
 # http://www.linux-mag.com/id/1106/
 
-# List completions in rows, right to left
+# List completions in rows, left to right
 setopt LIST_ROWS_FIRST
 
 # matches case insensitive for lowercase
