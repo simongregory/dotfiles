@@ -37,6 +37,7 @@
 !node/completion.zsh
 !osx
 !osx/set-defaults.sh
+!osx/install-tools.sh
 !Rakefile
 !README.md
 !ruby
