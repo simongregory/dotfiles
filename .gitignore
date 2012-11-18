@@ -48,6 +48,15 @@
 !tm
 !tm/tm_properties.symlink
 !tm/tm_setup.sh
+!vim
+!vim/vimrc.symlink
+!vim/vim.symlink
+!vim/vim.symlink/colors
+!vim/vim.symlink/colors/Tomorrow-Night.vim
+!vim/vim.symlink/syntax
+!vim/vim.symlink/syntax/actionscript.vim
+!vim/vim.symlink/syntax/cucumber.vim
+!vim/vim.symlink/syntax/mkd.vim
 !zsh
 !zsh/config.zsh
 !zsh/prompt.zsh
