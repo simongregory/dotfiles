@@ -6,7 +6,7 @@
 # then you'll end up looking at it on the github
 # site. Works with git 1.8
 
-info = `git remote -v &>/dev/null`
+info = `git remote -v 2>/dev/null`
 print "Not a git repository, " if info =~ /Not a git repository/
 
 remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)\.git/
