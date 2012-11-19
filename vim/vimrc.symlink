@@ -39,7 +39,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 " Bundle 'desert.vim'
 " Bundle 'darkslategray.vim'
 " Bundle 'twilight.vim'
-" Bundle 'twilight256.vim'
+Bundle 'twilight256.vim'
 " Bundle 'Solarized'
 
 filetype plugin indent on     " required!
@@ -110,11 +110,21 @@ let mapleader = ","
 " inoremap <Up> <C-o>gk
 
 " ----------------------------------------------------------------------------
+" Learn the hard way
+" ----------------------------------------------------------------------------
+
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+" ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
 
+" set cursorline             " hightlight the current line
 set ruler                  " show the cursor position all the time
-" set noshowcmd              " don't display incomplete commands
+set showcmd                " display incomplete commands
 set nolazyredraw           " turn off lazy redraw
 set number                 " line numbers
 set wildmenu               " turn on wild menu
@@ -126,6 +136,7 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " ----------------------------------------------------------------------------
 " Visual Cues
@@ -135,7 +146,7 @@ set showmatch              " brackets/braces that is
 set mat=5                  " duration to show matching brace (1/10 sec)
 set incsearch              " do incremental searching
 set laststatus=2           " always show the status line
-set ignorecase             " ignore case when searching
+set ignorecase smartcase   " ignore case when searching, unless terms contains uppercase chars
 set nohlsearch             " don't highlight searches
 set visualbell             " be quiet
 
@@ -169,9 +180,9 @@ autocmd Filetype json setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " Enable syntax highlighting
 syntax enable
-set background=dark
-colorscheme tomorrow-night
 set t_Co=256
+set background=dark
+colorscheme twilight256
 
 " Set extra options when running in GUI mode
 " if has("gui_running")
