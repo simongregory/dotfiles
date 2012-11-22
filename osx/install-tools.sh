@@ -9,6 +9,7 @@ brew install rbenv
 brew install ruby-build
 brew install ohcount
 brew install p7zip
+brew install ctags
 
 # Apps to install
 
