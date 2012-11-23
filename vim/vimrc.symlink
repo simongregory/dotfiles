@@ -1,5 +1,10 @@
+" Simon Gregory, VIM Configuration
+"
+" Mostly pilfered from pre-existing samples found on my travels.
+" Only tested in VIM 7.3 via the Terminal.app on OSX 10.8
+"
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off                   " (vundle) required!
 
 " ----------------------------------------------------------------------------
 "  Bundles
@@ -24,6 +29,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'ActionScript-3-Omnicomplete'
 Bundle 'fugitive.vim'
+"Bundle 'ervandew/supertab'
 
 " vim-scripts repos
 " Bundle 'L9'
@@ -44,15 +50,6 @@ Bundle 'twilight256.vim'
 
 filetype plugin indent on     " required!
 
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-
 set noswapfile
 
 " ----------------------------------------------------------------------------
@@ -63,22 +60,12 @@ set autoindent             " automatic indent new lines
 set smartindent            " be smart about it
 " inoremap # X<BS>#
 set nowrap                 " do not wrap lines
-" set wrap                 "Wrap lines
 set softtabstop=2          " yep, two
 set shiftwidth=2           " ..
 set tabstop=4
 set expandtab              " expand tabs to spaces
 set nosmarttab             " no thank you to tabs
 set formatoptions+=n       " support for numbered/bullet lists
-" set virtualedit=block      " allow virtual edit in visual block ..
-
-" Linebreak on 500 characters
-" set lbr
-" set tw=500
-
-" Linebreak on 500 characters
-" set lbr
-" set tw=500
 
 set ai "Auto indent
 set si "Smart indent
@@ -110,19 +97,10 @@ let mapleader = ","
 " inoremap <Up> <C-o>gk
 
 " ----------------------------------------------------------------------------
-" Learn the hard way
-" ----------------------------------------------------------------------------
-
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
-
-" ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
 
-" set cursorline             " hightlight the current line
+set cursorline             " hightlight the current line
 set ruler                  " show the cursor position all the time
 set showcmd                " display incomplete commands
 set nolazyredraw           " turn off lazy redraw
@@ -183,6 +161,25 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme twilight256
+
+" Overide the colorschemes
+" hi StatusLine ctermbg=darkgrey ctermfg=white
+" hi StatusLineNC ctermbg=black ctermfg=lightgrey
+hi VertSplit ctermbg=black ctermfg=lightgrey
+" hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234
+hi CursorLine cterm=NONE ctermbg=235
+
+if has('statusline')
+  set laststatus=2
+
+  " Broken down into easily includeable segments
+  set statusline=%<%f\    " Filename
+  set statusline+=%w%h%m%r " Options
+  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=\ [%{&ff}/%Y]            " filetype
+  set statusline+=\ [%{getcwd()}]          " current dir
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
 
 " Set extra options when running in GUI mode
 " if has("gui_running")
