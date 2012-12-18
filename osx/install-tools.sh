@@ -25,3 +25,10 @@ open http://www.getinvisiblehand.com
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
+
+# MacRuby
+
+open http://macruby.org/
+
+
+
