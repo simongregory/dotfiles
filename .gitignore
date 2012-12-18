@@ -65,8 +65,11 @@
 !zsh/functions/_brew
 !zsh/functions/_c
 !zsh/functions/_h
+!zsh/functions/_radio
 !zsh/functions/_rake
 !zsh/functions/_tm
+!zsh/functions/_tv
+!zsh/functions/_weather
 !zsh/functions/c
 !zsh/functions/h
 !zsh/functions/tm
