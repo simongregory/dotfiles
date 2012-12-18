@@ -4,9 +4,9 @@
 #
 # If you're inside a repo whose origin is github
 # then you'll end up looking at it on the github
-# site. Only known to work with git version 1.7.5.1
+# site. Works with git 1.8
 
-info = `git info`
+info = `git remote -v 2>/dev/null`
 print "Not a git repository, " if info =~ /Not a git repository/
 
 remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)\.git/

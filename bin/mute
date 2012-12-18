@@ -1,0 +1,12 @@
+#!/usr/bin/osascript
+
+ -- Mute toggle for the sytem volume
+
+set volumeSettings to get volume settings
+if output muted of volumeSettings is false then
+  set volume with output muted
+  copy "Volume muted" to stdout
+else
+  set volume without output muted
+  copy "Volume un-muted" to stdout
+end if

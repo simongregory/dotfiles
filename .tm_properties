@@ -1,7 +1,7 @@
-[ "{git_completion,bash_profile.symlink,bash_prompt.symlink}" ]
+[ "{git_completion,bash_profile.symlink,bash_prompt.symlink,zshrc.symlink,_radio,_tv,_rake,_tm,_brew}" ]
 fileType         = "source.shell"
 
-[ "LICENSE" ]
+[ "{LICENSE,vimrc.symlink}" ]
 fileType         = "text.plain"
 
 [ "tm_properties.symlink" ]

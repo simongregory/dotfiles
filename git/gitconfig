@@ -32,3 +32,5 @@
   ui = auto
 [difftool "Kaleidoscope"]
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[credential]
+  helper = osxkeychain
