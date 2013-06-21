@@ -4,7 +4,7 @@ alias g='git'
 compdef g=git
 
 # alias rake to rk and let completions know
-alias rk='rake'
+alias rk='bundle exec rake'
 compdef rk=rake
 
 alias m="mate ."
@@ -36,6 +36,7 @@ alias gel="cd $PROJECTS/gel/"
 alias dot="cd ~/.dotfiles"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
+alias www="cd ~/www"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
