@@ -15,13 +15,14 @@ brew install ctags
 
 open http://mac.github.com
 open http://macromates.com
-open http://www.sublimetext.com/2
 open http://www.versionsapp.com
 open http://www.kaleidoscopeapp.com
 open http://www.jetbrains.com/idea/
 open http://www.spotify.com/uk/
 open http://colloquy.info/downloads.html
 open http://www.getinvisiblehand.com
+open http://www.sublimetext.com/3
+open http://wbond.net/sublime_packages/package_control
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
@@ -29,6 +30,3 @@ wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
 # MacRuby
 
 open http://macruby.org/
-
-
-
