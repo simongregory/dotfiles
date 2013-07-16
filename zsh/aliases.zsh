@@ -7,6 +7,8 @@ compdef g=git
 alias rk='bundle exec rake'
 compdef rk=rake
 
+alias mvc='mvn compile -o'
+
 alias m="mate ."
 alias s="subl ."
 
@@ -31,6 +33,7 @@ alias ...="cd ../.."
 # in-here
 alias ipd="cd $PROJECTS/ipd/"
 alias imp="cd $PROJECTS/imp/"
+alias tip="cd $PROJECTS/tip/"
 alias core="cd $PROJECTS/core/"
 alias gel="cd $PROJECTS/gel/"
 alias dot="cd ~/.dotfiles"
