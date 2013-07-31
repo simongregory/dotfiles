@@ -43,7 +43,6 @@ alias www="cd ~/www"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
-alias hudson="open https://ci-pal.test.bbc.co.uk/hudson/job/imp/"
 
 # random
 alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"

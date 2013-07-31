@@ -95,3 +95,18 @@ function pman() {
 function ffind() {
   find . -name $1 -print
 }
+
+function hudson() {
+  project=${PWD##*/}
+  open "https://ci-pal.test.bbc.co.uk/hudson/job/$project/"
+}
+
+function bbctest() {
+  project=${PWD##*/}
+  open "http://static.test.bbc.co.uk/$project/latest"
+}
+
+function bbcint() {
+  project=${PWD##*/}
+  open "http://static.test.bbc.co.uk/$project/latest"
+}
