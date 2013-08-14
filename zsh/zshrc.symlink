@@ -52,4 +52,4 @@ source $ZSH/zsh/aliases.zsh
 
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
