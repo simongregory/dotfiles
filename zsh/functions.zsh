@@ -101,12 +101,12 @@ function hudson() {
   open "https://ci-pal.test.bbc.co.uk/hudson/job/$project/"
 }
 
-function bbctest() {
+function test-env() {
   project=${PWD##*/}
   open "http://static.test.bbc.co.uk/$project/latest"
 }
 
-function bbcint() {
+function int-env() {
   project=${PWD##*/}
   open "http://static.test.bbc.co.uk/$project/latest"
 }
