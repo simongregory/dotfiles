@@ -40,6 +40,8 @@ alias dot="cd ~/.dotfiles"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 alias www="cd ~/www"
+alias downloader="open -a BBC\ iPlayer\ Downloads.app --args $@"
+alias mpx="open -a MPlayerX $@"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"

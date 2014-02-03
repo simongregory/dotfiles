@@ -10,6 +10,7 @@ brew install ruby-build
 brew install ohcount
 brew install p7zip
 brew install ctags
+brew install coreutils #gnu core utilities
 
 # Apps to install
 
@@ -23,6 +24,7 @@ open http://colloquy.info/downloads.html
 open http://www.getinvisiblehand.com
 open http://www.sublimetext.com/3
 open http://wbond.net/sublime_packages/package_control
+open https://github.com/jbtule/cdto
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
