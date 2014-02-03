@@ -17,9 +17,8 @@ def is_fu_project? path
   File.exist?("#{path}/src") and File.exist?("#{path}/test")
 end
 
-#TODO: Re-jig to use --porcelain mode
 def git_status
-  `git status -u`.split("\n")
+  `git status --porcelain`.split("\n")
 end
 
 unless is_fu_project? dir
@@ -27,8 +26,8 @@ unless is_fu_project? dir
   exit 0;
 end
 
-tracked_changes = /#	(modified|renamed|new file):\s+\b(.*\.(as|mxml))/
-untracked_changes = /#\s([\w.\/]+\.(as|mxml))/
+tracked_changes = /\s[MADRCU]\s+\b(.*\.(as|mxml))/
+untracked_changes = /\?\?\s([\w.\/]+\.(as|mxml))/
 
 changed_files = []
 testable_files = []
@@ -36,7 +35,7 @@ testable_classes = []
 
 git_status.each { |line|
   if line =~ tracked_changes
-    changed_files << $2.split(' -> ')
+    changed_files << $1.split(' -> ')
   elsif line =~ untracked_changes
     changed_files << $1
   end
