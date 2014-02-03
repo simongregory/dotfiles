@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# Nip to travis ci in your default browser.
+#
+# If you're inside a repo whose origin is github
+# then you'll end up looking at it on the travis.ci
+# site. Works with git 1.8
+
+info = `git remote -v 2>/dev/null`
+print "Not a git repository, " if info =~ /Not a git repository/
+
+remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)\.git/
+repo = info.match(remote_regex)[2] rescue ''
+
+go_to = "https://travis-ci.org/#{repo}"
+puts "opening: #{go_to}"
+
+`open #{go_to}`

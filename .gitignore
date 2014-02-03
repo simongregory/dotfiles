@@ -21,6 +21,7 @@
 !bin/lyrics
 !bin/mute
 !bin/subl
+!bin/trav
 !git
 !git/gitconfig
 !git/completion.zsh
