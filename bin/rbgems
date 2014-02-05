@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# If you're inside a directory with a gemspec.
+# open it on rubygems.org in your default browser.
+
+gem_name = Dir['*.gemspec'][0] ||= ''
+gem_name.sub! '.gemspec', ''
+
+abort "Dammn, gem detection failed" if gem_name.empty?
+
+go_to = "https://rubygems.org/gems/#{gem_name}"
+puts "opening: #{go_to}"
+
+`open #{go_to}`
