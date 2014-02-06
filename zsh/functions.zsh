@@ -60,19 +60,19 @@ function amazon() {
 
 #search google within the last month...
 function google() {
-  search=$(_url_encode "$@")
-  open "http://www.google.co.uk/#q=$search&hl=en&tbo=1&output=search&tbs=qdr:m";
+  search=$(_url_encode "$@");
+  open "https://www.google.co.uk/#q=$search";
 }
 
 function wikipedia() {
   search=$(_url_encode "$@")
-  open "http://en.wikipedia.org/w/index.php?title=Special:Search&search=$search"
+  open "http://en.wikipedia.org/w/index.php?title=Special:Search&search=$search";
 }
 
 # Search wolfram alpha for...
 function wolfram () {
   search=$(_url_encode "$@")
-  open "http://www.wolframalpha.com/input/?i=$search"
+  open "http://www.wolframalpha.com/input/?i=$search";
 }
 
 #search google maps for...
