@@ -18,6 +18,9 @@ alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
 alias cuke="bundle exec cucumber"
 alias puke="bundle exec cucumber --format progress"
 
+alias cop="rubocop"
+alias gip="get_iplayer"
+
 # List all files colorized in long format, without groups,
 # with dot files, appending / for dirs, and displaying
 # file sizes in bytes,kb,mb and gb
@@ -42,6 +45,7 @@ alias downloads="cd ~/Downloads"
 alias www="cd ~/www"
 alias downloader="open -a BBC\ iPlayer\ Downloads.app --args $@"
 alias mpx="open -a MPlayerX $@"
+alias chrome="open -a Google\ Chrome $@"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"

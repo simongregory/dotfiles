@@ -3,7 +3,7 @@ fontSize = 12
 
 spellingLanguage = 'en_GB'
 
-includeInFileChooser = "{$includeInFileChooser,.gitignore,.ruby-version,.ruby-gemset,.tm_properties}"
+includeInFileChooser = "{$includeInFileChooser,.gitignore,.ruby-version,.ruby-gemset,.tm_properties,.rubocop.yml}"
 
 [ .git/COMMIT_EDITMSG ]
 spellChecking    = true
