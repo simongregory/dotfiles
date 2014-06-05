@@ -55,3 +55,6 @@ alias iplayer="open http://www.bbc.co.uk/iplayer/"
 alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"
 alias reloadbundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias pyserve="python -m SimpleHTTPServer"
+
+# be helpful
+alias rvm="echo 'remember switching to rbenv dumbass?'"
