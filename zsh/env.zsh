@@ -15,3 +15,4 @@ export PROJECTS=$HOME/Code
 export SPROUT_GENERATORS="$PROJECTS/sprout-templates/bbc"
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
 export FLEX_HOME=/Users/simon/Library/Sprouts/1.1/cache/flex4/4.6.0.23201
+export SIKULIX_HOME="/usr/local/lib/sikulix/sikuli-java.jar"
