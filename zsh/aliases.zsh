@@ -45,6 +45,7 @@ alias downloads="cd ~/Downloads"
 alias www="cd ~/www"
 alias downloader="open -a BBC\ iPlayer\ Downloads.app --args $@"
 alias mpx="open -a MPlayerX $@"
+alias vlc="open -a VLC $@"
 alias chrome="open -a Google\ Chrome $@"
 
 # out-there
