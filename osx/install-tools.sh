@@ -5,8 +5,10 @@ brew doctor #make sure all is ok
 brew install git
 brew install zsh
 brew install wget
+
 brew install rbenv
 brew install ruby-build
+
 brew install ohcount
 brew install p7zip
 brew install ctags
@@ -25,10 +27,7 @@ open http://www.getinvisiblehand.com
 open http://www.sublimetext.com/3
 open http://wbond.net/sublime_packages/package_control
 open https://github.com/jbtule/cdto
+open https://www.virtualbox.org/wiki/Downloads
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
-
-# MacRuby
-
-open http://macruby.org/
