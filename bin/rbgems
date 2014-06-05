@@ -6,9 +6,14 @@
 gem_name = Dir['*.gemspec'][0] ||= ''
 gem_name.sub! '.gemspec', ''
 
-abort "Dammn, gem detection failed" if gem_name.empty?
+go_to = "https://rubygems.org"
 
-go_to = "https://rubygems.org/gems/#{gem_name}"
-puts "opening: #{go_to}"
+if gem_name.empty?
+  print 'No gem found! '
+else
+  go_to << "/gems/#{gem_name}"
+end
+
+puts "Opening: #{go_to}"
 
 `open #{go_to}`
