@@ -26,7 +26,7 @@ unless is_fu_project? dir
   exit 0;
 end
 
-tracked_changes = /\s[MADRCU]\s+\b(.*\.(as|mxml))/
+tracked_changes = /\s*[MADRCU]\s+\b(.*\.(as|mxml))/  #CHANGED Because git add wasn't working, there was no space at the beginning of the line
 untracked_changes = /\?\?\s([\w.\/]+\.(as|mxml))/
 
 changed_files = []
