@@ -67,4 +67,9 @@ task :setup_sublime do
   `./sublime/sublime-setup.sh`
 end
 
+desc "Setup and install textmate"
+task :setup_textmate do
+  `./tm/tm_setup.sh`
+end
+
 task :default => 'install'
