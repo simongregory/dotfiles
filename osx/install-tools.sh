@@ -28,6 +28,11 @@ open http://www.sublimetext.com/3
 open http://wbond.net/sublime_packages/package_control
 open https://github.com/jbtule/cdto
 open https://www.virtualbox.org/wiki/Downloads
+open http://panic.com/transmit/
+open http://bjango.com/mac/istatmenus/
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
+
+# Other stuff
+open https://github.com/eaton/solarized # solarized colloquy theme 
