@@ -15,5 +15,5 @@ git clone https://github.com/simongregory/flexpmd.tmbundle.git FlexPMD.tmbundle
 git clone https://github.com/simongregory/actionscript3-tmbundle.git ActionScript3.tmbundle
 git clone https://github.com/simongregory/actionscript3-robotlegs.tmbundle.git ActionScriptRobotlegs.tmbundle
 git clone https://github.com/simongregory/mockolate.tmbundle.git Mockolate.tmbundle
-git clone https://github.com/simongregory/helvectorlight-tmbundle.git HelvectorLight.tmbundle
+git clone https://github.com/simongregory/helvectorlight.tmbundle.git HelvectorLight.tmbundle
 git clone https://github.com/simongregory/markdown.tmbundle.git Markdown.tmbundle
