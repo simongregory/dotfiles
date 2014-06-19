@@ -30,9 +30,10 @@ open https://github.com/jbtule/cdto
 open https://www.virtualbox.org/wiki/Downloads
 open http://panic.com/transmit/
 open http://bjango.com/mac/istatmenus/
+open https://atom.io
 
 # Quicklook - create ~/Library/QuickLook
 wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
 
 # Other stuff
-open https://github.com/eaton/solarized # solarized colloquy theme 
+open https://github.com/eaton/solarized # solarized colloquy theme
