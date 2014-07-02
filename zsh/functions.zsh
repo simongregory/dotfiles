@@ -27,7 +27,7 @@ function _svn_off_reith {
 }
 
 function off_reith {
-  scselect "Automatic" #Maybe 'BBC Off Network'
+  scselect "BBC Off Network" #Maybe 'Automatic'
   clear_proxy
 }
 
