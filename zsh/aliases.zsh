@@ -47,6 +47,7 @@ alias downloader="open -a BBC\ iPlayer\ Downloads.app --args $@"
 alias mpx="open -a MPlayerX $@"
 alias vlc="open -a VLC $@"
 alias chrome="open -a Google\ Chrome $@"
+alias ij="open -a IntelliJ\ IDEA\ 13 $@"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
