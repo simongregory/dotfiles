@@ -67,6 +67,7 @@
 !zsh/functions/_brew
 !zsh/functions/_c
 !zsh/functions/_h
+!zsh/functions/_grunt
 !zsh/functions/_radio
 !zsh/functions/_rake
 !zsh/functions/_tm
