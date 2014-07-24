@@ -47,6 +47,8 @@
 !sublime
 !sublime/Preferences.sublime-settings
 !sublime/sublime-setup.sh
+!sublime/Default (OSX).sublime-keymap
+!sublime/Markdown.sublime-settings
 !tm
 !tm/tm_properties.symlink
 !tm/tm_setup.sh
