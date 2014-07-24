@@ -8,6 +8,7 @@ git clone https://github.com/bomberstudios/Strip-Whitespace-On-Save.tmbundle.git
 git clone https://github.com/rspec/rspec-tmbundle.git RSpec.tmbundle
 git clone https://github.com/cucumber/cucumber-tmbundle.git Cucumber.tmbundle
 git clone https://github.com/mads379/Whitespace.tmbundle.git Whitespace.tmbundle
+git clone https://github.com/fiveisprime/Jasmine.tmbundle.git
 
 git clone https://github.com/simongregory/flex-tmbundle.git Flex.tmbundle
 git clone https://github.com/simongregory/flexunit.tmbundle.git FlexUnit.tmbundle
