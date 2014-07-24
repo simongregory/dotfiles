@@ -7,7 +7,19 @@ function reith {
   scselect "BBC On Network"
   _set_proxies "http://www-cache.reith.bbc.co.uk:80"
   _svn_on_reith
+  _git_on_reith
   echo "Proxy set for reith: $HTTP_PROXY"
+}
+
+function _git_on_reith {
+    git config --global --remove-section http 2> /dev/null
+    git config --global http.proxy "http://www-cache.reith.bbc.co.uk:80" 2> /dev/null
+    echo "Git Reith Proxy On"
+}
+
+function _git_off_reith {
+  git config --global --remove-section http 2> /dev/null
+  echo "Git Reith Proxy Off"
 }
 
 function _svn_on_reith {
@@ -34,6 +46,7 @@ function off_reith {
 function clear_proxy {
   unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
   _svn_off_reith
+  _git_off_reith
   echo "Proxy settings cleared"
 }
 
