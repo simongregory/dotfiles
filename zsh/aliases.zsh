@@ -35,6 +35,7 @@ alias ...="cd ../.."
 
 # in-here
 alias ipd="cd $PROJECTS/ipd/"
+alias hq="cd $PROJECTS/ipd-hq/"
 alias imp="cd $PROJECTS/imp/"
 alias tip="cd $PROJECTS/tip/"
 alias core="cd $PROJECTS/core/"
