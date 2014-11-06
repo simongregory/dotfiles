@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+def info
+  `git info`
+end
+
+def issue_number
+  ref = `git symbolic-ref HEAD`
+  num = ''
+  num = "-#{$1}" if ref =~ /(\d+)$/
+  num
+end
+
+jira_space = ''
+
+if info =~ /^origin.*\/([\w-]+)\.git/
+  if $1.include? 'ipd'
+    jira_space = 'DOWNLOADER'
+  elsif $1 == 'tip'
+    jira_space = 'IPLAYER'
+  end
+end
+
+unless jira_space.empty? && issue_number.empty?
+  url = "https://jira.dev.bbc.co.uk/browse/#{jira_space}#{issue_number}"
+else
+  url = 'https://jira.dev.bbc.co.uk/secure/Dashboard.jspa'
+end
+
+`open #{url}`
