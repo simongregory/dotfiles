@@ -7,6 +7,9 @@ compdef g=git
 alias rk='bundle exec rake'
 compdef rk=rake
 
+alias gr="grunt"
+compdef gr=grunt
+
 alias mvc='mvn compile -o'
 
 alias m="mate ."
