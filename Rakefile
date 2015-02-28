@@ -72,4 +72,10 @@ task :setup_textmate do
   `./tm/tm_setup.sh`
 end
 
+desc "Setup vim"
+task :setup_vim do
+ #`./vim/vim_setup.sh`
+ puts 'Invoke ./vim/vim_setup.sh directly (can error then get stuck requesting input when invoked via Rake)'
+end
+
 task :default => 'install'
