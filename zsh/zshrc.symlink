@@ -50,6 +50,6 @@ zstyle ':completion:*' menu select=1
 source $ZSH/git/completion.zsh
 source $ZSH/zsh/aliases.zsh
 
-PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH:$HOME/code/chromium/depot_tools"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
