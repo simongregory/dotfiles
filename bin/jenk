@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+def info
+  `git info`
+end
+
+jenkins_build = ''
+
+if info =~ /^origin.*\/([\w-]+)\.git/
+  if $1.include? 'ipd-hq'
+    jenkins_build = 'ipd-hq'
+  end
+end
+
+unless jenkins_build.empty?
+  url = "https://jenkins.bbc.co.uk/job/#{jenkins_build}"
+else
+  url = 'https://jenkins.bbc.co.uk/view/iplayer'
+end
+
+`open #{url}`

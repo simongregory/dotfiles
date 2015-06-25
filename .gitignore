@@ -19,6 +19,8 @@
 !bin/gitio
 !bin/hub
 !bin/jira
+!bin/jenk
+!bin/cosmos
 !bin/lyrics
 !bin/mute
 !bin/subl
