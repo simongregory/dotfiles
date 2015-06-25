@@ -4,11 +4,15 @@ function ql {
 }
 
 function reith {
-  scselect "BBC On Network"
-  _set_proxies "http://www-cache.reith.bbc.co.uk:80"
-  _svn_on_reith
-  _git_on_reith
-  echo "Proxy set for reith: $HTTP_PROXY"
+  NET_LOC=$(networksetup -getcurrentlocation)
+
+  if [[ $NET_LOC == "BBC On Network" ]]; then
+    off_reith
+  elif [[ $NET_LOC == "BBC Off Network" ]]; then
+    on_reith
+  else
+    echo "Unable to detect wether to switch reith on or off (Currently set to '$NET_LOC')"
+  fi
 }
 
 function _git_on_reith {
@@ -36,6 +40,14 @@ function _svn_off_reith {
   then
     sed -i "" 's/http-proxy-host = www-cache\.reith\.bbc\.co\.uk/#http-proxy-host = www-cache\.reith\.bbc\.co\.uk/' "$svn_servers"
   fi
+}
+
+function on_reith {
+  scselect "BBC On Network"
+  _set_proxies "http://www-cache.reith.bbc.co.uk:80"
+  _svn_on_reith
+  _git_on_reith
+  echo "Proxy set for reith: $HTTP_PROXY"
 }
 
 function off_reith {
