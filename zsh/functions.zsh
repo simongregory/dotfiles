@@ -26,6 +26,16 @@ function _git_off_reith {
   echo "Git Reith Proxy Off"
 }
 
+function _npm_on_reith {
+  npm config set proxy "http://www-cache.reith.bbc.co.uk:80"
+  npm config set https-proxy "http://www-cache.reith.bbc.co.uk:80"
+}
+
+function _npm_off_reith {
+  npm config delete proxy
+  npm config delete https-proxy
+}
+
 function _svn_on_reith {
   svn_servers="$HOME/.subversion/servers"
   if [[ -f "$svn_servers" ]]
@@ -47,6 +57,7 @@ function on_reith {
   _set_proxies "http://www-cache.reith.bbc.co.uk:80"
   _svn_on_reith
   _git_on_reith
+  _npm_on_reith
   echo "Proxy set for reith: $HTTP_PROXY"
 }
 
@@ -59,6 +70,7 @@ function clear_proxy {
   unset http_proxy HTTP_PROXY https_proxy HTTPS_PROXY
   _svn_off_reith
   _git_off_reith
+  _npm_off_reith
   echo "Proxy settings cleared"
 }
 
