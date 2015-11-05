@@ -28,6 +28,7 @@ alias gip="get_iplayer"
 # with dot files, appending / for dirs, and displaying
 # file sizes in bytes,kb,mb and gb
 alias la="ls -Gahop"
+alias ll="ls -Glhop"
 
 # file size via @gf3
 alias fs="stat -f \"%z bytes\""
