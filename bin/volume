@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+on run(arguments)
+    set v to (first item of arguments) as integer
+    set volume output volume v
+end run

@@ -25,6 +25,7 @@
 !bin/mute
 !bin/subl
 !bin/trav
+!bin/volume
 !bin/rbgems
 !git
 !git/gitconfig
