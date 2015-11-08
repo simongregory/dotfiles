@@ -63,5 +63,9 @@ alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"
 alias reloadbundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias pyserve="python -m SimpleHTTPServer"
 
+# for the ears
+alias r6="open -a 'Google Chrome' 'http://www.bbc.co.uk/radio/player/bbc_6music'"
+alias r4="open -a 'Google Chrome' 'http://www.bbc.co.uk/radio/player/bbc_radio_fourfm'"
+
 # be helpful
 alias rvm="echo 'remember switching to rbenv dumbass?'"
