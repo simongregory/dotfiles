@@ -12,6 +12,7 @@
 !bash/functions.sh
 !bin
 !bin/fu-suite
+!bin/bbcradio
 !bin/git-delete-local-merged
 !bin/git-rank-contributers
 !bin/git-info
