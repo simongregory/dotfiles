@@ -42,4 +42,4 @@ precmd() {
   print -Pn "\e]0;%~\a"
 }
 
-PROMPT=$'$(directory_name) $(git_dirty)$(need_push)\n> '
+PROMPT=$'%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} $(directory_name) $(git_dirty)$(need_push)\n> '
