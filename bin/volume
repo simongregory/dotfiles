@@ -1,6 +1,15 @@
 #!/usr/bin/osascript
 
+-- Useage: volume [0.0-10]
+--
+-- System sound accepts values between 0 and 100
+-- To save a bit of typing we use values between
+-- 1 and 10, if you want greater granularity use
+-- a decimal value.
+
 on run(arguments)
-    set v to (first item of arguments) as integer
-    set volume output volume v
+  set v to (first item of arguments) as integer
+  set v to v * 10
+
+  set volume output volume v
 end run
