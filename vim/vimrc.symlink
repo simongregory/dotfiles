@@ -11,42 +11,38 @@ filetype off                   " (vundle) required!
 " ----------------------------------------------------------------------------
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/tComment'
-Bundle 'vim-scripts/StripWhiteSpaces'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'mattn/zencoding-vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'ActionScript-3-Omnicomplete'
-Bundle 'fugitive.vim'
-"Bundle 'ervandew/supertab'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/tComment'
+Plugin 'vim-scripts/StripWhiteSpaces'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mattn/emmet-vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'fugitive.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
 
 " vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-Bundle 'snipMate'
+Plugin 'snipMate'
+Plugin 'applescript.vim'
 
 " non github repos
 " command-t will need installing, invoke
 " the command t help and follow the instructions to complie
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 
 " Colour schemes
-" Bundle 'desert.vim'
-" Bundle 'darkslategray.vim'
-" Bundle 'twilight.vim'
-Bundle 'twilight256.vim'
-" Bundle 'Solarized'
+Plugin 'twilight256.vim'
+
+call vundle#end()
 
 filetype plugin indent on     " required!
 
@@ -114,7 +110,7 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " ----------------------------------------------------------------------------
 " Visual Cues
@@ -161,25 +157,17 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme twilight256
+" colorscheme jellybeans
+
+" Airline
+let g:airline_powerline_fonts = 1
 
 " Overide the colorschemes
 " hi StatusLine ctermbg=darkgrey ctermfg=white
 " hi StatusLineNC ctermbg=black ctermfg=lightgrey
-hi VertSplit ctermbg=black ctermfg=lightgrey
-" hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234
+" hi VertSplit ctermbg=black ctermfg=lightgrey
+hi CursorLine guifg=NONE guibg=#121212 gui=NONE ctermfg=NONE ctermbg=234
 hi CursorLine cterm=NONE ctermbg=235
-
-if has('statusline')
-  set laststatus=2
-
-  " Broken down into easily includeable segments
-  set statusline=%<%f\    " Filename
-  set statusline+=%w%h%m%r " Options
-  set statusline+=%{fugitive#statusline()} "  Git Hotness
-  set statusline+=\ [%{&ff}/%Y]            " filetype
-  set statusline+=\ [%{getcwd()}]          " current dir
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-endif
 
 " Set extra options when running in GUI mode
 " if has("gui_running")
