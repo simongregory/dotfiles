@@ -56,6 +56,7 @@ alias chrome="open -a Google\ Chrome $@"
 alias ij="open -a IntelliJ\ IDEA\ 14 $@"
 alias vol=volume
 alias spotify="open -a Spotify"
+alias gh="github"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
