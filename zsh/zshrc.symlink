@@ -49,6 +49,10 @@ zstyle ':completion:*' menu select=1
 # source $ZSH/node/completion.zsh
 source $ZSH/git/completion.zsh
 source $ZSH/zsh/aliases.zsh
+source <(npm completion)
+
+# TODO: brew zsh-completion
+# fpath=(/usr/local/share/zsh-completions $fpath)
 
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH:$HOME/code/chromium/depot_tools"
 
