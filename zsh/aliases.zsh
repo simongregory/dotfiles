@@ -14,6 +14,7 @@ alias mvc='mvn compile -o'
 
 alias m="mate ."
 alias s="subl ."
+alias e="atom ."
 
 alias reup='. ~/.zshrc'
 alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
