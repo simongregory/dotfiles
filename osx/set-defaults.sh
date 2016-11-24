@@ -102,8 +102,14 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+# Disable transparency in the menu bar and elsewhere on Yosemite
+#defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Speed up desktop switching
+defaults write com.apple.universalaccess reduceMotion -bool false
+
 ###############################################################################
-# Screen                                                                        #
+# Screen                                                                      #
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
@@ -172,11 +178,13 @@ sudo chflags nohidden /Volumes
 # Commented out, as this is known to cause problems when saving files in Adobe Illustrator CS5 :(
 #echo "0x08000100:0" > ~/.CFUserTextEncoding
 
-# Always open everything in Finder's list view.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+# Use column view in all Finder windows by default
+# Four-letter codes for the view modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Avoid creating .DS_Store files on network volumes
+# Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
