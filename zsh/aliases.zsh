@@ -10,6 +10,11 @@ compdef rk=rake
 alias gr="grunt"
 compdef gr=grunt
 
+alias n='npm'
+alias nr='npm run'
+alias ns='npm run start'
+alias nb='npm run build'
+
 alias mvc='mvn compile -o'
 
 alias m="mate ."
