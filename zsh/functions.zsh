@@ -52,7 +52,7 @@ function _svn_off_reith {
   fi
 }
 
-function atom_bakup {
+function bakup_atom {
   apm list --installed --bare > ~/.atom/package.list
 }
 
