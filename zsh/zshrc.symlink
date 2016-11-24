@@ -48,8 +48,8 @@ zstyle ':completion:*' menu select=1
 # load completions after autocomplete loads
 # source $ZSH/node/completion.zsh
 source $ZSH/git/completion.zsh
-source $ZSH/zsh/aliases.zsh
 source <(npm completion)
+source $ZSH/zsh/aliases.zsh
 
 # TODO: brew zsh-completion
 # fpath=(/usr/local/share/zsh-completions $fpath)

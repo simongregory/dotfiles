@@ -1,14 +1,7 @@
 # tool micro-cuts
-# alias git to g and let completions know
 alias g='git'
-compdef g=git
-
-# alias rake to rk and let completions know
 alias rk='bundle exec rake'
-compdef rk=rake
-
 alias gr="grunt"
-compdef gr=grunt
 
 alias n='npm'
 alias nr='npm run'
@@ -35,6 +28,7 @@ alias gip="get_iplayer"
 # file sizes in bytes,kb,mb and gb
 alias la="ls -Gahop"
 alias ll="ls -Glhop"
+alias le="ls -le"
 
 # file size via @gf3
 alias fs="stat -f \"%z bytes\""
