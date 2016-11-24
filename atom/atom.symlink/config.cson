@@ -3,10 +3,31 @@
     disabledPackages: [
       "whitespace"
     ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      ".nyc_output"
+    ]
+    projectHome: "/Users/simon/code"
     telemetryConsent: "no"
   editor:
     fontSize: 16
   "exception-reporting":
     userId: "b67e2095-f03b-6450-3c77-a0bb42fcdc80"
+  "fuzzy-finder":
+    ignoredNames: [
+      "app/*"
+      "coverage/*"
+      "releases/*"
+      "src/vendor/*"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false
