@@ -1,17 +1,14 @@
 #!/usr/bin/env ruby
 
 def info
-  `git info`
+  `git config --get remote.origin.url`
 end
 
 base_url = 'https://jenkins.iplayer.tools.bbc.co.uk'
 jenkins_build = ''
 
-if info =~ /^origin.*\/([\w-]+)\.git/
-  if $1.include? 'ipd-hq'
-    jenkins_build = 'ipd-hq'
-  end
-end
+repo = info.split('/').pop;
+jenkins_build = repo if repo
 
 unless jenkins_build.empty?
   url = "#{base_url}/job/#{jenkins_build}"
