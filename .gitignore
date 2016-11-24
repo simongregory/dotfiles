@@ -3,6 +3,14 @@
 # except:
 !.gitignore
 !.tm_properties
+!atom
+!atom/atom.symlink
+!atom/atom.symlink/config.cson
+!atom/atom.symlink/init.coffee
+!atom/atom.symlink/keymap.cson
+!atom/atom.symlink/snippets.cson
+!atom/atom.symlink/styles.less
+!atom/atom.symlink/package.list
 !bash
 !bash/aliases.sh
 !bash/bash_profile.symlink
@@ -86,4 +94,3 @@
 !zsh/functions/tm
 !zsh/functions/last_modified
 !zsh/functions/smartextract
-

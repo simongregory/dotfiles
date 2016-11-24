@@ -72,6 +72,11 @@ task :setup_textmate do
   `./tm/tm_setup.sh`
 end
 
+desc "Setup atom"
+task :setup_atom do
+  `./atom/atom_setup.sh`
+end
+
 desc "Setup vim"
 task :setup_vim do
  #`./vim/vim_setup.sh`
