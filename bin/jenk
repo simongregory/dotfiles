@@ -4,14 +4,19 @@ def info
   `git config --get remote.origin.url`
 end
 
+def is_branch
+  `git rev-parse --abbrev-ref HEAD` != 'master'
+end
+
 base_url = 'https://jenkins.iplayer.tools.bbc.co.uk'
 jenkins_build = ''
 
-repo = info.split('/').pop;
+repo = info.split('/').pop.chomp;
 jenkins_build = repo if repo
+pull_requests = is_branch ? "-pull-requests" : ""
 
-unless jenkins_build.empty?
-  url = "#{base_url}/job/#{jenkins_build}"
+unless jenkins_build.empty?  
+  url = "#{base_url}/job/#{jenkins_build}#{pull_requests}"
 else
   url = "#{base_url}/"
 end
