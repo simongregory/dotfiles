@@ -14,6 +14,14 @@ brew install p7zip
 brew install ctags
 brew install coreutils #gnu core utilities
 
+brew tap caskroom/cask
+
+# Quick look plugins
+# https://github.com/sindresorhus/quick-look-plugins
+
+brew cask install qlstephen qlmarkdown quicklook-json qlprettypatch \
+  quicklook-csv betterzipql qlimagesize suspicious-package
+
 # Apps to install
 
 open http://mac.github.com
@@ -34,7 +42,7 @@ open https://atom.io
 
 # Quicklook - create ~/Library/QuickLook
 #wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
-open https://github.com/whomwah/qlstephen/releases
+#open https://github.com/whomwah/qlstephen/releases
 
 # Other stuff
 open https://github.com/eaton/solarized # solarized colloquy theme
