@@ -9,7 +9,7 @@
 info = `git remote -v 2>/dev/null`
 print "Not a git repository, " if info =~ /Not a git repository/
 
-remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)\.git/
+remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)(\.git)?/
 repo = info.match(remote_regex)[2] rescue ''
 
 go_to = "https://github.com/#{repo}"
