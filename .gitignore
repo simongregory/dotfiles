@@ -4,6 +4,7 @@
 !.gitignore
 !.tm_properties
 !atom
+!atom/atom_setup.sh
 !atom/atom.symlink
 !atom/atom.symlink/config.cson
 !atom/atom.symlink/init.coffee
