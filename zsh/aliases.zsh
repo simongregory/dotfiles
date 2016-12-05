@@ -23,6 +23,8 @@ alias puke="bundle exec cucumber --format progress"
 alias cop="rubocop"
 alias gip="get_iplayer"
 
+alias master="git checkout master"
+
 # List all files colorized in long format, without groups,
 # with dot files, appending / for dirs, and displaying
 # file sizes in bytes,kb,mb and gb
