@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# This one just doesn't stick..
+git remote prune origin

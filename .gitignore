@@ -23,6 +23,7 @@
 !bin/fu-suite
 !bin/bbcradio
 !bin/git-delete-local-merged
+!bin/git-prune-origin
 !bin/git-rank-contributers
 !bin/git-info
 !bin/git-wtf
@@ -59,6 +60,7 @@
 !README.md
 !ruby
 !ruby/gemrc.symlink
+!ruby/install.sh
 !sublime
 !sublime/Preferences.sublime-settings
 !sublime/sublime-setup.sh
