@@ -1,7 +1,14 @@
 "*":
+  "atom-beautify":
+    general:
+      analytics: false
+    js:
+      brace_style: "collapse-preserve-inline"
+      end_with_newline: true
   core:
     disabledPackages: [
       "whitespace"
+      "linter-csslint"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -26,6 +33,20 @@
       "coverage/*"
       "releases/*"
       "src/vendor/*"
+    ]
+  "linter-eslint":
+    fixOnSave: true
+  "linter-ui-default":
+    panelHeight: 93
+    showPanel: true
+  "linter-xo":
+    fixOnSave: true
+  minimap: {}
+  "mocha-test-runner": {}
+  "spell-check":
+    addKnownWords: true
+    knownWords: [
+      "programme"
     ]
   "tree-view":
     hideIgnoredNames: true
