@@ -57,3 +57,8 @@ source $ZSH/zsh/aliases.zsh
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH:$HOME/code/chromium/depot_tools"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+export PATH="$HOME/.yarn/bin:$PATH"
