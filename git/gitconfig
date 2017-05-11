@@ -2,7 +2,7 @@
   name = Simon Gregory
   email = EMAIL
 [core]
-  editor = mate -w
+  editor = atom --wait
   excludesfile = ~/.gitignore
   autocrlf = input
   whitespace = fix,trailing-space,space-before-tab

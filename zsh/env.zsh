@@ -1,5 +1,4 @@
 export EDITOR="/usr/local/bin/mate"
-export GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 # always use color output for ls
 export CLICOLOR=1
