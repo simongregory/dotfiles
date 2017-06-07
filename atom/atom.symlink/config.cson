@@ -6,6 +6,7 @@
       brace_style: "collapse-preserve-inline"
       end_with_newline: true
   core:
+    closeDeletedFileTabs: true
     disabledPackages: [
       "whitespace"
       "linter-csslint"
@@ -23,6 +24,7 @@
     ]
     projectHome: "/Users/simon/code"
     telemetryConsent: "no"
+    warnOnLargeFileLimit: 5
   editor:
     fontSize: 16
   "exception-reporting":
