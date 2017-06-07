@@ -3,10 +3,11 @@ alias g='git'
 alias rk='bundle exec rake'
 alias gr="grunt"
 
-alias n='npm'
-alias nr='npm run'
-alias ns='npm run start'
-alias nb='npm run build'
+alias n='yarn'
+alias nr='yarn run'
+alias ns='yarn run start'
+alias nb='yarn run build'
+alias ncb='yarn run clean && yarn run build'
 
 alias mvc='mvn compile -o'
 
