@@ -26,7 +26,11 @@
     telemetryConsent: "no"
     warnOnLargeFileLimit: 5
   editor:
-    fontSize: 16
+    fontFamily: "Roboto Mono Light for Powerline"
+    fontSize: 18
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 2
   "exception-reporting":
     userId: "b67e2095-f03b-6450-3c77-a0bb42fcdc80"
   "fuzzy-finder":
@@ -52,5 +56,6 @@
     ]
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
