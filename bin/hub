@@ -16,3 +16,15 @@ go_to = "https://github.com/#{repo}"
 puts "opening: #{go_to}"
 
 `open #{go_to}`
+
+# Feature: Pass in a file reference to open on GH
+#
+# if ARGV[0] && File.file?(ARGV[0])
+#   puts "Yes #{ARGV[0]}"
+# else
+#   puts "No #{ARGV[0]}"
+# end
+#
+# branch_name = `git rev-parse --abbrev-ref HEAD`
+#
+# Dealing with relative paths and branches
