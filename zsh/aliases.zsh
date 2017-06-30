@@ -7,7 +7,7 @@ alias n='npm'
 alias nr='npm run'
 alias ns='npm run start'
 alias nb='npm run build'
-alias ncb='npm run clean && yarn run build'
+alias ncb='npm run clean && npm run build'
 
 alias mvc='mvn compile -o'
 
