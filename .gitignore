@@ -79,6 +79,8 @@
 !vim/vim.symlink/syntax/actionscript.vim
 !vim/vim.symlink/syntax/cucumber.vim
 !vim/vim.symlink/syntax/mkd.vim
+!win
+!win/Microsoft.PowerShell_profile.ps1
 !zsh
 !zsh/config.zsh
 !zsh/prompt.zsh
