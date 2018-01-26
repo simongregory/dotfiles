@@ -25,6 +25,7 @@ alias cop="rubocop"
 alias gip="get_iplayer"
 
 alias master="git checkout master"
+alias co="git checkout"
 
 # List all files colorized in long format, without groups,
 # with dot files, appending / for dirs, and displaying
@@ -60,6 +61,8 @@ alias ij="open -a IntelliJ\ IDEA\ 14 $@"
 alias vol=volume
 alias spotify="open -a Spotify"
 alias gh="github"
+alias drob="cd \"$HOME/Dropbox (BBC)\""
+alias drop="cd \"$HOME/Dropbox (Personal)\""
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
@@ -68,6 +71,7 @@ alias iplayer="open http://www.bbc.co.uk/iplayer/"
 alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"
 alias reloadbundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias pyserve="python -m SimpleHTTPServer"
+alias prettyjson="python -m json.tool"
 
 # for the ears
 alias r6="open -a 'Google Chrome' 'http://www.bbc.co.uk/radio/player/bbc_6music'"

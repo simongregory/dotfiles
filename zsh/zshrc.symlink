@@ -62,3 +62,15 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# PATH="/Users/simon/perl5/bin${PATH:+:${PATH}}"; export PATH;
+# PERL5LIB="/Users/simon/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+# PERL_LOCAL_LIB_ROOT="/Users/simon/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+# PERL_MB_OPT="--install_base \"/Users/simon/perl5\""; export PERL_MB_OPT;
+# PERL_MM_OPT="INSTALL_BASE=/Users/simon/perl5"; export PERL_MM_OPT;
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Although handy this really kills startup time
+#eval "$(cosmos completion)"
