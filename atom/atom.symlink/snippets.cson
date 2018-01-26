@@ -56,4 +56,4 @@
     'body': 'this.retries(${1:integer});'
   'mocha timeout':
     'prefix': 'timeout'
-    'body': 'this.timeout(${1:milliseconds});'    
+    'body': 'this.timeout(${1:milliseconds});'

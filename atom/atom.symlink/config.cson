@@ -11,7 +11,6 @@
       "whitespace"
       "linter-csslint"
     ]
-    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".hg"
@@ -27,7 +26,7 @@
     warnOnLargeFileLimit: 5
   editor:
     fontFamily: "Roboto Mono Light for Powerline"
-    fontSize: 18
+    fontSize: 19
     softWrap: true
     softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 2
@@ -42,9 +41,11 @@
     ]
   "linter-eslint":
     fixOnSave: true
+    rulesToDisableWhileFixing: [
+      "ava/no-only-test"
+    ]
   "linter-ui-default":
-    panelHeight: 93
-    showPanel: true
+    panelHeight: 69
   "linter-xo":
     fixOnSave: true
   minimap: {}
@@ -54,8 +55,12 @@
     knownWords: [
       "programme"
     ]
+  "toggle-quotes": {}
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".js.source":
+  "toggle-quotes":
+    quoteCharacters: "\"'`"
