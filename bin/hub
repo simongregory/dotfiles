@@ -12,7 +12,9 @@ print "Not a git repository, " if info =~ /Not a git repository/
 remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)(\.git)?/
 repo = info.match(remote_regex)[2] rescue ''
 
-go_to = "https://github.com/#{repo}"
+path = ['releases', 'pulls', 'commits'].include?(ARGV[0]) ? "/#{ARGV[0]}" : ''
+
+go_to = "https://github.com/#{repo}#{path}"
 puts "opening: #{go_to}"
 
 `open #{go_to}`
