@@ -5,7 +5,7 @@ cosmos_component = ''
 
 if info =~ /^origin.*\/([\w-]+)/
   if $1.include? 'ipd-hq'
-    cosmos_component = 'ipd-hq'
+    cosmos_component = 'downloads-app'
   end
 end
 
