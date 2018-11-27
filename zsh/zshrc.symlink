@@ -48,8 +48,21 @@ zstyle ':completion:*' menu select=1
 # load completions after autocomplete loads
 # source $ZSH/node/completion.zsh
 source $ZSH/git/completion.zsh
-source <(npm completion)
 source $ZSH/zsh/aliases.zsh
+
+# Load NVM before we load npm completions otherwise node cannot be found
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+
+source <(npm completion)
 
 # TODO: brew zsh-completion
 # fpath=(/usr/local/share/zsh-completions $fpath)
@@ -60,8 +73,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-export PATH="$HOME/.yarn/bin:$PATH"
+# [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+# export PATH="$HOME/.yarn/bin:$PATH"
 
 # PATH="/Users/simon/perl5/bin${PATH:+:${PATH}}"; export PATH;
 # PERL5LIB="/Users/simon/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -69,8 +82,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # PERL_MB_OPT="--install_base \"/Users/simon/perl5\""; export PERL_MB_OPT;
 # PERL_MM_OPT="INSTALL_BASE=/Users/simon/perl5"; export PERL_MM_OPT;
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# Clobber brew python with the system one...
+#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # Although handy this really kills startup time
 #eval "$(cosmos completion)"

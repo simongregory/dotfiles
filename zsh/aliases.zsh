@@ -7,7 +7,11 @@ alias n='npm'
 alias nr='npm run'
 alias ns='npm run start'
 alias nb='npm run build'
+alias b='npm run build'
 alias ncb='npm run clean && npm run build'
+alias cover='npm run coverage'
+alias lint='npm run lint'
+alias clean='npm run clean'
 
 alias mvc='mvn compile -o'
 
@@ -16,10 +20,10 @@ alias s="subl ."
 alias e="atom ."
 
 alias reup='. ~/.zshrc'
-alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
 
-alias cuke="bundle exec cucumber"
-alias puke="bundle exec cucumber --format progress"
+#alias sprout-home="cd $HOME/Library/Sprouts/1.1/cache"
+#alias cuke="bundle exec cucumber"
+#alias puke="bundle exec cucumber --format progress"
 
 alias cop="rubocop"
 alias gip="get_iplayer"
@@ -44,9 +48,7 @@ alias ...="cd ../.."
 # in-here
 alias ipd="cd $PROJECTS/ipd/"
 alias hq="cd $PROJECTS/ipd-hq/"
-alias imp="cd $PROJECTS/imp/"
 alias tip="cd $PROJECTS/tip/"
-alias nip="cd $PROJECTS/nip/"
 alias core="cd $PROJECTS/core/"
 alias gel="cd $PROJECTS/gel/"
 alias dot="cd ~/.dotfiles"
@@ -54,10 +56,10 @@ alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 alias www="cd ~/www"
 alias downloader="open -a BBC\ iPlayer\ Downloads.app --args $@"
-alias mpx="open -a MPlayerX $@"
-alias vlc="open -a VLC $@"
+#alias mpx="open -a MPlayerX $@"
+#alias vlc="open -a VLC $@"
 alias chrome="open -a Google\ Chrome $@"
-alias ij="open -a IntelliJ\ IDEA\ 14 $@"
+#alias ij="open -a IntelliJ\ IDEA\ 14 $@"
 alias vol=volume
 alias spotify="open -a Spotify"
 alias gh="github"
