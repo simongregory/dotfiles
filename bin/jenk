@@ -11,8 +11,12 @@ end
 base_url = 'https://jenkins.iplayer.tools.bbc.co.uk'
 jenkins_build = ''
 
-repo = info.split('/').pop.chomp;
+repo = info.split('/').pop.chomp.sub('.git', '');
 jenkins_build = repo if repo
+jenkins_build = 'ipd-app' if repo === 'ipd'
+jenkins_build = 'ipd-web-app' if repo === 'ipd-hq'
+jenkins_build = 'ipd-mash' if repo === 'mash'
+jenkins_build = 'ipd-mediaselector-client-js' if repo === 'mediaselector-client-js'
 pull_requests = is_branch ? "-pull-requests" : ""
 
 unless jenkins_build.empty?
