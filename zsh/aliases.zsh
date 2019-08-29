@@ -73,6 +73,7 @@ alias iplayer="open http://www.bbc.co.uk/iplayer/"
 alias jenkins="java -jar /usr/local/Cellar/jenkins/1.439/lib/jenkins.war"
 alias reloadbundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias pyserve="python -m SimpleHTTPServer"
+alias nserve="npx http-server -c-1" #-c-1 switches off cache
 alias prettyjson="python -m json.tool"
 
 # for the ears
