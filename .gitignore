@@ -85,6 +85,7 @@
 !vscode/snippets
 !vscode/snippets/javascript.json
 !vscode/snippets/javascriptreact.json
+!vscode/vscode-setup.sh
 !win
 !win/Microsoft.PowerShell_profile.ps1
 !zsh
