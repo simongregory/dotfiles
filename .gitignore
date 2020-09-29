@@ -79,6 +79,12 @@
 !vim/vim.symlink/syntax/actionscript.vim
 !vim/vim.symlink/syntax/cucumber.vim
 !vim/vim.symlink/syntax/mkd.vim
+!vscode
+!vscode/keybindings.json
+!vscode/settings.json
+!vscode/snippets
+!vscode/snippets/javascript.json
+!vscode/snippets/javascriptreact.json
 !win
 !win/Microsoft.PowerShell_profile.ps1
 !zsh

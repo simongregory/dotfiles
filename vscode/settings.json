@@ -1,0 +1,80 @@
+{
+  "window.zoomLevel": 2,
+  "editor.minimap.enabled": true,
+  "telemetry.enableTelemetry": false,
+  "workbench.statusBar.feedback.visible": false,
+  "editor.formatOnSave": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.showIcons": true,
+  "workbench.sideBar.location": "left",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "cSpell.language": "en",
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "feature",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pub",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ],
+  "cSpell.userWords": [
+    "dismissible",
+    "drivelist",
+    "errored",
+    "flexbox",
+    "iplayer",
+    "maxsize",
+    "mediaset",
+    "mmxvi",
+    "mmxvii",
+    "mountpoints",
+    "scrollbar",
+    "truthy",
+    "widevine",
+    "xlink"
+  ],
+  "typescript.autoImportSuggestions.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.activityBar.visible": true,
+  "editor.accessibilitySupport": "off",
+  "mocha-snippets.function-type": "function",
+  "mocha-snippets.semicolon": false,
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "git.suggestSmartCommit": false,
+  "explorer.confirmDragAndDrop": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.trailingComma": "none",
+  "explorer.confirmDelete": false
+}
