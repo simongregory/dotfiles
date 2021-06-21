@@ -102,7 +102,7 @@ function amazon() {
 #search google within the last month...
 function google() {
   search=$(_url_encode "$@");
-  open "https://www.google.co.uk/#q=$search";
+  open "https://www.google.co.uk/search?q=$search";
 }
 
 function wikipedia() {
@@ -137,17 +137,3 @@ function ffind() {
   find . -name $1 -print
 }
 
-function hudson() {
-  project=${PWD##*/}
-  open "https://ci-pal.test.bbc.co.uk/hudson/job/$project/"
-}
-
-function test-env() {
-  project=${PWD##*/}
-  open "http://static.test.bbc.co.uk/$project/latest"
-}
-
-function int-env() {
-  project=${PWD##*/}
-  open "http://static.test.bbc.co.uk/$project/latest"
-}
