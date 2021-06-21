@@ -6,13 +6,15 @@ cosmos_component = ''
 if info =~ /^origin.*\/([\w-]+)/
   if $1.include? 'ipd-hq'
     cosmos_component = 'downloads-app'
+  else
+    cosmos_component = $1
   end
 end
 
 unless cosmos_component.empty?
-  url = "https://admin.live.bbc.co.uk/cosmos/component/#{cosmos_component}"
+  url = "https://cosmos.tools.bbc.co.uk/services/#{cosmos_component}"
 else
-  url = 'https://admin.live.bbc.co.uk/cosmos/project/iplayer'
+  url = 'https://cosmos.tools.bbc.co.uk/project/iplayer'
 end
 
 `open #{url}`
