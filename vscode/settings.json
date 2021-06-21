@@ -68,13 +68,20 @@
   "git.suggestSmartCommit": false,
   "explorer.confirmDragAndDrop": false,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "HookyQR.beautify"
   },
   "prettier.singleQuote": true,
   "prettier.arrowParens": "avoid",
   "prettier.trailingComma": "none",
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.tabSize": 2,
+  "git.confirmSync": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.renderWhitespace": "all"
 }
