@@ -2,11 +2,12 @@
   name = Simon Gregory
   email = EMAIL
 [core]
-  editor = atom --wait
+  editor = code --wait
   excludesfile = ~/.gitignore
   autocrlf = input
   whitespace = fix,trailing-space,space-before-tab
   quotepath = false
+  ignorecase = false
 [apply]
   whitespace = fix
 [alias]
@@ -24,15 +25,8 @@
   aliases=config --get-regexp 'alias.*'
 [branch]
   autosetupmerge = true
-[difftool]
-  prompt = false
-[diff]
-  tool = Kaleidoscope
-  mnemonicprefix = true
 [color]
   ui = auto
-[difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [credential]
   helper = osxkeychain
 [help]
