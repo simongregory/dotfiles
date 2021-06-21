@@ -50,37 +50,19 @@ zstyle ':completion:*' menu select=1
 source $ZSH/git/completion.zsh
 source $ZSH/zsh/aliases.zsh
 
-# Load NVM before we load npm completions otherwise node cannot be found
-#export NVM_DIR="$HOME/.nvm"
-#. "/usr/local/opt/nvm/nvm.sh"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-#[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
 
 source <(npm completion)
 
 # TODO: brew zsh-completion
 # fpath=(/usr/local/share/zsh-completions $fpath)
 
-PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH:$HOME/code/chromium/depot_tools"
+PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/gregos06/.dotfiles/bin:$PATH:$HOME/Library/Python/3.8/bin"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-# [[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-# export PATH="$HOME/.yarn/bin:$PATH"
-
-# PATH="/Users/simon/perl5/bin${PATH:+:${PATH}}"; export PATH;
-# PERL5LIB="/Users/simon/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-# PERL_LOCAL_LIB_ROOT="/Users/simon/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-# PERL_MB_OPT="--install_base \"/Users/simon/perl5\""; export PERL_MB_OPT;
-# PERL_MM_OPT="INSTALL_BASE=/Users/simon/perl5"; export PERL_MM_OPT;
 
 # Clobber brew python with the system one...
 #export PATH="/usr/local/opt/python/libexec/bin:$PATH"
