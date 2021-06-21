@@ -62,19 +62,14 @@ task :set_osx_defaults do
   `./osx/set-defaults.sh`
 end
 
-desc "Setup and install sublime"
-task :setup_sublime do
-  `./sublime/sublime-setup.sh`
-end
-
 desc "Setup and install textmate"
 task :setup_textmate do
   `./tm/tm_setup.sh`
 end
 
-desc "Setup atom"
-task :setup_atom do
-  `./atom/atom_setup.sh`
+desc "Setup vscode"
+task :setup_vscode do
+  `./vscode/vscode_setup.sh`
 end
 
 desc "Setup vim"
