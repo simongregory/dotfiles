@@ -12,6 +12,7 @@
 !bash/functions.sh
 !bin
 !bin/fu-suite
+!bin/bak
 !bin/bbcradio
 !bin/git-delete-local-merged
 !bin/git-prune-origin
@@ -31,7 +32,7 @@
 !bin/volume
 !bin/rbgems
 !git
-!git/gitconfig
+!git/gitconfig.symlink
 !git/completion.zsh
 !git/gitignore.symlink
 !lib
