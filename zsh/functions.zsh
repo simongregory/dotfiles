@@ -52,10 +52,6 @@ function _svn_off_reith {
   fi
 }
 
-function bakup_atom {
-  apm list --installed --bare > ~/.atom/package.list
-}
-
 function on_reith {
   scselect "BBC On Network"
   _set_proxies "http://www-cache.reith.bbc.co.uk:80"
