@@ -92,7 +92,7 @@ function _set_proxies() {
 #search amazon.co.uk for...
 function amazon() {
   search=$(_url_encode "$@")
-  open "http://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$search";
+  open "https://www.amazon.co.uk/s?url=search-alias%3Daps&field-keywords=$search";
 }
 
 #search google within the last month...
@@ -103,19 +103,19 @@ function google() {
 
 function wikipedia() {
   search=$(_url_encode "$@")
-  open "http://en.wikipedia.org/w/index.php?title=Special:Search&search=$search";
+  open "https://en.wikipedia.org/w/index.php?title=Special:Search&search=$search";
 }
 
 # Search wolfram alpha for...
 function wolfram () {
   search=$(_url_encode "$@")
-  open "http://www.wolframalpha.com/input/?i=$search";
+  open "https://www.wolframalpha.com/input/?i=$search";
 }
 
 #search google maps for...
 function maps() {
   search=$(_url_encode "$@")
-  open "http://maps.google.co.uk/?q=$search";
+  open "https://maps.google.co.uk/?q=$search";
 }
 
 function _url_encode (){
