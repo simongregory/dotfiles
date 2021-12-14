@@ -1,6 +1,7 @@
-[user]
-  name = Simon Gregory
-  email = EMAIL
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+
 [core]
   editor = code --wait
   excludesfile = ~/.gitignore
@@ -8,8 +9,10 @@
   whitespace = fix,trailing-space,space-before-tab
   quotepath = false
   ignorecase = false
+
 [apply]
   whitespace = fix
+
 [alias]
   st = status
   ci = commit
@@ -23,17 +26,27 @@
   wc = whatchanged -p --abbrev-commit --pretty=medium
   ign = ls-files -o -i --exclude-standard
   aliases=config --get-regexp 'alias.*'
+
 [branch]
   autosetupmerge = true
+
 [color]
   ui = auto
-[credential]
-  helper = osxkeychain
+
 [help]
   autocorrect = 1
+
 [push]
-  # See `git help config` (search for push.default)
-  # for more information on different options of the below setting.
-  #
-  # Setting to git 2.0 default to suppress warning message
-  default = simple
+  default = current
+
+[pull]
+  rebase = true
+
+[status]
+  submoduleSummary = false
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  program = /usr/local/bin/gpg2
