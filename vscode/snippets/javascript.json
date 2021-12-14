@@ -15,10 +15,19 @@
   "Mocha it": {
     "prefix": "it",
     "body": [
-      "it('$1', async function() {",
+      "it('$1', async () => {",
       "  $2",
-      "})",
+      "});",
     ],
     "description": "Mocha it function declaration"
-  }
+  },	
+	"Mocha describe": {
+		"prefix": "describe",
+		"body": [
+			"describe('$1', () => {",
+			"  $2",
+			"});",
+		],
+		"description": "Mocha describe function declaration"
+	}
 }
