@@ -10,7 +10,7 @@ setopt prompt_subst
 
 # Load in config files
 source $ZSH/zsh/env.zsh
-source $ZSH/zsh/secret.zsh
+source $ZSH/secret/secret.zsh
 source $ZSH/zsh/config.zsh
 source $ZSH/zsh/prompt.zsh
 source $ZSH/zsh/functions.zsh
