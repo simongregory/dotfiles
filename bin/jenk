@@ -4,25 +4,20 @@ def info
   `git config --get remote.origin.url`
 end
 
-def is_branch
-  `git rev-parse --abbrev-ref HEAD`.chomp != 'master'
-end
+# branch detection
+#`git rev-parse --abbrev-ref HEAD`.chomp != 'master' # OR main
 
-base_url = 'https://ci.iplayer.tools.bbc.co.uk/'
-jenkins_build = ''
+base_url = 'https://jenkins7.ibl.api.bbci.co.uk'
 
 repo = info.split('/').pop.chomp.sub('.git', '');
-jenkins_build = repo if repo
-jenkins_build = 'downloads-pc-app-tests' if repo === 'ipd'
-jenkins_build = 'downloads-app' if repo === 'ipd-hq'
-jenkins_build = 'downloads-mpegdash-downloader' if repo === 'mash'
-jenkins_build = 'downloads-mediaselector-client-js' if repo === 'mediaselector-client-js'
-pull_requests = is_branch ? "-pull-requests" : ""
+jenkins_job = repo || ''
 
-unless jenkins_build.empty?
-  url = "#{base_url}/job/#{jenkins_build}#{pull_requests}"
+unless jenkins_job.empty?
+  url = "#{base_url}/job/#{jenkins_job}"
 else
   url = "#{base_url}/"
 end
+
+puts "opening: #{url}"
 
 `open #{url}`
