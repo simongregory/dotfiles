@@ -47,7 +47,7 @@
 !node/completion.zsh
 !nvm
 !nvm/default-packages
-!nvm/nvm_setup.sh
+!nvm/nvm-setup.sh
 !nvm/nvm.zsh
 !osx
 !osx/set-defaults.sh
@@ -57,11 +57,6 @@
 !ruby
 !ruby/gemrc.symlink
 !ruby/install.sh
-!sublime
-!sublime/Preferences.sublime-settings
-!sublime/sublime-setup.sh
-!sublime/Default (OSX).sublime-keymap
-!sublime/Markdown.sublime-settings
 !tm
 !tm/tm_properties.symlink
 !tm/tm_setup.sh
