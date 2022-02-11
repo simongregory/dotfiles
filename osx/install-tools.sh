@@ -2,17 +2,17 @@
 
 brew doctor #make sure all is ok
 
-brew install git
-brew install zsh
-brew install wget
+#brew install git
+#brew install zsh
 #brew install nodejs #use nvm
+#brew install wget
 
 brew install rbenv
 brew install ruby-build
 
 brew install p7zip
-brew install ctags
-brew install coreutils #gnu core utilities
+#brew install ctags
+#brew install coreutils #gnu core utilities
 
 brew tap caskroom/cask
 
