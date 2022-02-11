@@ -45,6 +45,9 @@
 !node
 !node/install.sh
 !node/completion.zsh
+!nvm/default-packages
+!nvm/nvm-setup.sh
+!nvm/nvm.zsh
 !osx
 !osx/set-defaults.sh
 !osx/install-tools.sh
