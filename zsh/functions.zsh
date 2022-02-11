@@ -3,6 +3,11 @@ function ql {
   qlmanage -p $1 &>/dev/null
 }
 
+#make a directory and change to it
+function mkdirc {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 function reith {
   NET_LOC=$(networksetup -getcurrentlocation)
 
