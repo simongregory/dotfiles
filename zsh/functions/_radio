@@ -1,3 +1,0 @@
-#compdef radio
-
-compadd `radio help -c`
