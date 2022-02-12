@@ -14,13 +14,16 @@ brew install p7zip
 #brew install ctags
 #brew install coreutils #gnu core utilities
 
-brew tap caskroom/cask
+#brew tap homebrew/cask
 
 # Quick look plugins
 # https://github.com/sindresorhus/quick-look-plugins
 
-brew cask install qlstephen qlmarkdown quicklook-json qlprettypatch \
-  quicklook-csv betterzipql qlimagesize suspicious-package
+brew install --cask qlstephen
+
+# QL Plugins may be embargoed
+# list quarantine with: xattr -r ~/Library/QuickLook
+# remove quarantine with: xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 # Apps to install
 
@@ -28,3 +31,7 @@ open https://mac.github.com
 open https://macromates.com
 open https://www.virtualbox.org/wiki/Downloads
 open https://code.visualstudio.com/download
+
+brew install --cask \
+  docker \
+  rectangle \
