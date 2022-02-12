@@ -59,3 +59,4 @@ alias prettyjson="python -m json.tool"
 
 # be helpful
 alias rvm="echo 'remember switching to rbenv dumbass?'"
+alias cdot="code ~/.dotfiles"
