@@ -30,6 +30,10 @@
 !bin/trav
 !bin/volume
 !bin/rbgems
+!fnm
+!fnm/completion.zsh
+!fnm/default-packages
+!fnm/node-version.symlink
 !git
 !git/gitconfig.symlink
 !git/completion.zsh
@@ -44,10 +48,6 @@
 !node
 !node/install.sh
 !node/completion.zsh
-!nvm
-!nvm/default-packages
-!nvm/nvm-setup.sh
-!nvm/nvm.zsh
 !osx
 !osx/set-defaults.sh
 !osx/install-tools.sh
@@ -87,6 +87,7 @@
 !zsh/functions/_brew
 !zsh/functions/_c
 !zsh/functions/_h
+!zsh/functions/_fnm
 !zsh/functions/_grunt
 !zsh/functions/_radio
 !zsh/functions/_rake

@@ -1,3 +1,6 @@
+# Time startup: 'zmodload zsh/zprof' line 1, 'zprof' on last, then:
+# time zsh -i -c exit
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -17,14 +20,10 @@ source $ZSH/zsh/functions.zsh
 source $ZSH/zsh/completions.zsh
 source $ZSH/zsh/aliases.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source $ZSH/nvm/nvm.zsh
-
 PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/$USER/.dotfiles/bin:$PATH"
-#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+#fast node manager
+eval "$(fnm env --use-on-cd)"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
@@ -36,7 +35,6 @@ source $ZSH/git/completion.zsh
 # Clobber brew python with the system one...
 #export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 #export PATH="$PATH:$HOME/Library/Python/3.8/bin"
-export PATH="$PATH:$HOME/Library/Python/3.9/bin"
-
-alias pip=/usr/local/bin/pip3
-alias python=/usr/local/bin/python3
+#export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+#alias pip=/usr/local/bin/pip3
+#alias python=/usr/local/bin/python3

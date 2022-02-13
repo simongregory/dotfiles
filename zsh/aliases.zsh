@@ -1,7 +1,6 @@
 # tool micro-cuts
 alias g='git'
 alias rk='bundle exec rake'
-alias gr="grunt"
 alias o='open'
 
 alias n='npm'
@@ -48,6 +47,7 @@ alias vol=volume
 alias spotify="open -a Spotify"
 alias drob="cd \"$HOME/Dropbox (BBC)\""
 alias drop="cd \"$HOME/Dropbox (Personal)\""
+alias cdot="code ~/.dotfiles"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
@@ -59,4 +59,4 @@ alias prettyjson="python -m json.tool"
 
 # be helpful
 alias rvm="echo 'remember switching to rbenv dumbass?'"
-alias cdot="code ~/.dotfiles"
+alias nvm=fnm

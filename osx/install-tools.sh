@@ -4,7 +4,7 @@ brew doctor #make sure all is ok
 
 #brew install git
 #brew install zsh
-#brew install nodejs #use nvm
+brew install fnm #fast node manager
 #brew install wget
 
 brew install rbenv
