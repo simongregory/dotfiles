@@ -2,7 +2,14 @@
 # When making changes to completions clear the completions cache
 # using rm ~/.zcompdump
 autoload -U compinit
-compinit
+
+# limit to loading the cache once a day see:
+# https://gist.github.com/ctechols/ca1035271ad134841284#gistcomment-2308206
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+
+compinit -C
 
 # Good zsh completion background reading
 # man zshcompsys
