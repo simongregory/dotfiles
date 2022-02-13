@@ -45,3 +45,7 @@ function _url_encode (){
 function ffind() {
   find . -name $1 -print
 }
+
+function npm-install-default-global-packages() {
+  cat ~/.dotfiles/fnm/default-packages | xargs npm install -g
+}
