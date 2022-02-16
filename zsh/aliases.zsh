@@ -47,7 +47,7 @@ alias vol=volume
 alias spotify="open -a Spotify"
 alias drob="cd \"$HOME/Dropbox (BBC)\""
 alias drop="cd \"$HOME/Dropbox (Personal)\""
-alias cdot="code ~/.dotfiles"
+alias cdot="code ~/.dotfiles/dotfiles.code-workspace"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
