@@ -15,7 +15,6 @@ setopt prompt_subst
 source $ZSH/zsh/env.zsh
 source $ZSH/secret/secret.zsh
 source $ZSH/zsh/config.zsh
-source $ZSH/zsh/prompt.zsh
 source $ZSH/zsh/functions.zsh
 source $ZSH/zsh/completions.zsh
 source $ZSH/zsh/aliases.zsh
@@ -38,3 +37,6 @@ source $ZSH/git/completion.zsh
 #export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 #alias pip=/usr/local/bin/pip3
 #alias python=/usr/local/bin/python3
+
+#prompt
+eval "$(starship init zsh)"

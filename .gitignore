@@ -3,13 +3,6 @@
 # except:
 !.gitignore
 !.tm_properties
-!bash
-!bash/aliases.sh
-!bash/bash_profile.symlink
-!bash/bash_prompt.symlink
-!bash/completion.sh
-!bash/env.sh
-!bash/functions.sh
 !bin
 !bin/fu-suite
 !bin/bak
@@ -59,16 +52,6 @@
 !tm
 !tm/tm_properties.symlink
 !tm/tm_setup.sh
-!vim
-!vim/vimrc.symlink
-!vim/vim.symlink
-!vim/vim_setup.sh
-!vim/vim.symlink/colors
-!vim/vim.symlink/colors/Tomorrow-Night.vim
-!vim/vim.symlink/syntax
-!vim/vim.symlink/syntax/actionscript.vim
-!vim/vim.symlink/syntax/cucumber.vim
-!vim/vim.symlink/syntax/mkd.vim
 !vscode
 !vscode/keybindings.json
 !vscode/settings.json
@@ -80,7 +63,6 @@
 !win/Microsoft.PowerShell_profile.ps1
 !zsh
 !zsh/config.zsh
-!zsh/prompt.zsh
 !zsh/completions.zsh
 !zsh/zshrc.symlink
 !zsh/functions
