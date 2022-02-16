@@ -5,12 +5,14 @@ brew doctor #make sure all is ok
 #brew install git
 #brew install zsh
 brew install fnm #fast node manager
+brew install starship #terminal prompt
 #brew install wget
 
 brew install rbenv
 brew install ruby-build
 
 brew install p7zip
+brew install remotemobprogramming/brew/mob
 #brew install ctags
 #brew install coreutils #gnu core utilities
 
@@ -24,6 +26,10 @@ brew install --cask qlstephen
 # QL Plugins may be embargoed
 # list quarantine with: xattr -r ~/Library/QuickLook
 # remove quarantine with: xattr -d -r com.apple.quarantine ~/Library/QuickLook
+
+# Fonts to install
+
+open https://www.nerdfonts.com/ #Fura/Fira Code
 
 # Apps to install
 
