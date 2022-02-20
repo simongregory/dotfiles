@@ -37,7 +37,15 @@ open https://mac.github.com
 open https://macromates.com
 open https://www.virtualbox.org/wiki/Downloads
 open https://code.visualstudio.com/download
+open https://www.mozilla.org/en-GB/firefox/new/
+open https://www.google.co.uk/chrome/
 
 brew install --cask \
   docker \
-  rectangle \
+  rectangle
+
+# Chrome Extensions
+open -a "Google Chrome" "chrome://extensions"
+# Install Talend API Tester - Free Edition && JSON Viewer
+#open https://github.com/tulios/json-viewer #use dark theme
+
