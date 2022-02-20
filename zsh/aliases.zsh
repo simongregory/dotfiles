@@ -15,9 +15,6 @@ alias clean='npm run clean'
 
 alias reup='. ~/.zshrc'
 
-#alias cuke="bundle exec cucumber"
-#alias puke="bundle exec cucumber --format progress"
-
 alias master="git checkout master"
 alias co="git checkout"
 
