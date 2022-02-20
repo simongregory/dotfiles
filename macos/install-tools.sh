@@ -29,7 +29,12 @@ brew install --cask qlstephen
 
 # Fonts to install
 
-open https://www.nerdfonts.com/ #Fura/Fira Code
+# For fonts that work with starship
+# FiraCode, Inconsolata - light versions
+open https://www.nerdfonts.com/
+# There's a powerline version of this which looks good 18pt
+# but it's not compatible with starship
+# open https://fonts.google.com/specimen/Roboto+Mono
 
 # Apps to install
 
@@ -39,6 +44,7 @@ open https://www.virtualbox.org/wiki/Downloads
 open https://code.visualstudio.com/download
 open https://www.mozilla.org/en-GB/firefox/new/
 open https://www.google.co.uk/chrome/
+open https://rectangleapp.com/
 
 brew install --cask \
   docker \
@@ -46,6 +52,5 @@ brew install --cask \
 
 # Chrome Extensions
 open -a "Google Chrome" "chrome://extensions"
-# Install Talend API Tester - Free Edition && JSON Viewer
-#open https://github.com/tulios/json-viewer #use dark theme
-
+# Talend API Tester - Free Edition
+# JSON Viewer & use dark theme
