@@ -44,6 +44,9 @@
 !osx
 !osx/set-defaults.sh
 !osx/install-tools.sh
+!macos
+!macos/set-defaults.sh
+!macos/install-tools.sh
 !Rakefile
 !README.md
 !ruby
