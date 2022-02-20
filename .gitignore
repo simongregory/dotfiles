@@ -67,6 +67,8 @@
 !zsh/config.zsh
 !zsh/completions.zsh
 !zsh/zshrc.symlink
+!zsh/zshenv.symlink
+!zsh/zprofile.symlink
 !zsh/functions
 !zsh/functions/_brew
 !zsh/functions/_c
@@ -81,5 +83,6 @@
 !zsh/functions/c
 !zsh/functions/h
 !zsh/functions/tm
+!zsh/functions/md
 !zsh/functions/last_modified
 !zsh/functions/smartextract

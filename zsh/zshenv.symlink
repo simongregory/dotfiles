@@ -1,0 +1,27 @@
+# editor of choice
+#export EDITOR="/usr/local/bin/mate"
+export EDITOR="/usr/local/bin/code"
+
+# always use color output for ls
+export CLICOLOR=1
+
+# colour settings for ls, edit at http://geoff.greer.fm/lscolors/
+#export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# where all the code lives
+export PROJECTS=$HOME/code
+
+# Python
+# Clobber brew python with the system one...
+#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#export PATH="$PATH:$HOME/Library/Python/3.8/bin"
+#export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+#alias pip=/usr/local/bin/pip3
+#alias python=/usr/local/bin/python3
+
+PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/$USER/.dotfiles/bin:$PATH"
+
+. "$HOME/.cargo/env"
