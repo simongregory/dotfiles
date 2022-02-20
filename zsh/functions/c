@@ -1,1 +1,11 @@
-cd $PROJECTS/$1;
+if [ -d "$PROJECTS/$1" ]
+then
+  cd $PROJECTS/$1;
+else
+  echo "$1 does not exist would you like to clone it? (y/n)"
+  read CLONE
+  if [ "$CLONE" = "y" ]; then
+    cd $PROJECTS;
+    git clone "https://github.com/bbc/$1" && cd "$(basename "$1" .git)";
+  fi
+fi
