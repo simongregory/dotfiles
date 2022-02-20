@@ -30,13 +30,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 source $ZSH/node/completion.zsh
 source $ZSH/git/completion.zsh
 
-# Python
-# Clobber brew python with the system one...
-#export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-#export PATH="$PATH:$HOME/Library/Python/3.8/bin"
-#export PATH="$PATH:$HOME/Library/Python/3.9/bin"
-#alias pip=/usr/local/bin/pip3
-#alias python=/usr/local/bin/python3
-
-#prompt
+# prompt
+export STARSHIP_CONFIG=$HOME/.starship.toml
 eval "$(starship init zsh)"

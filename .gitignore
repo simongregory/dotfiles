@@ -49,6 +49,8 @@
 !ruby
 !ruby/gemrc.symlink
 !ruby/install.sh
+!starship
+!starship/starship.toml.symlink
 !tm
 !tm/tm_properties.symlink
 !tm/tm_setup.sh
