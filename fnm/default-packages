@@ -3,3 +3,4 @@ bbc/cosmos-cli
 simongregory/wormholes
 vsce
 np
+ts-node
