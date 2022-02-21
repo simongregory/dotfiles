@@ -32,6 +32,8 @@ brew install --cask qlstephen
 # For fonts that work with starship
 # FiraCode, Inconsolata - light versions
 open https://www.nerdfonts.com/
+# The original FiraCode font can be found at
+# open https://mozilla.github.io/Fira/
 # There's a powerline version of this which looks good 18pt
 # but it's not compatible with starship
 # open https://fonts.google.com/specimen/Roboto+Mono
