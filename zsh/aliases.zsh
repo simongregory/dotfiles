@@ -36,15 +36,12 @@ alias ...="cd ../.."
 alias ipd="cd $PROJECTS/ipd/"
 alias hq="cd $PROJECTS/ipd-hq/"
 alias dot="cd ~/.dotfiles"
+alias cdot="code ~/.dotfiles/dotfiles.code-workspace"
 alias desktop="cd ~/Desktop"
 alias downloads="cd ~/Downloads"
 alias www="cd ~/www"
 alias chrome="open -a Google\ Chrome $@"
 alias vol=volume
-alias spotify="open -a Spotify"
-alias drob="cd \"$HOME/Dropbox (BBC)\""
-alias drop="cd \"$HOME/Dropbox (Personal)\""
-alias cdot="code ~/.dotfiles/dotfiles.code-workspace"
 
 # out-there
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
