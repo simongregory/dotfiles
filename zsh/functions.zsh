@@ -49,3 +49,7 @@ function ffind() {
 function npm-install-default-global-packages() {
   cat ~/.dotfiles/fnm/default-packages | xargs npm install -g
 }
+
+function main {
+  git switch $(git rev-parse --abbrev-ref origin/HEAD | cut -c8-)
+}
