@@ -20,7 +20,8 @@ compinit -C
 setopt LIST_ROWS_FIRST
 
 # matches case insensitive for lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
