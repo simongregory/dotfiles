@@ -72,3 +72,5 @@ $time\
 $status\
 $shell\
 $character"""
+
+command_timeout = 700
