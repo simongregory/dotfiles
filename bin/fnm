@@ -1,0 +1,10 @@
+#!/bin/bash
+# shim for fnm to auto install global npm packages after install
+/opt/homebrew/bin/fnm $*
+
+# echo "fnm shim $1"
+# echo "fnm result $?"
+
+if [[ "$1" == "install" && "$?" == "0" ]]; then
+  cat ~/.dotfiles/fnm/default-packages | xargs npm install -g
+fi
