@@ -27,9 +27,11 @@ eval "$(fnm env --use-on-cd)"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-# load completions after autocomplete loads
-source $ZSH/node/completion.zsh
-source $ZSH/git/completion.zsh
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  # load completions after autocomplete loads
+  source $ZSH/node/completion.zsh
+  source $ZSH/git/completion.zsh
+fi
 
 # prompt
 export STARSHIP_CONFIG=$HOME/.starship.toml
