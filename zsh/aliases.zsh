@@ -52,5 +52,5 @@ alias nserve="npx http-server -c-1" #-c-1 switches off cache
 alias prettyjson="python3 -m json.tool"
 
 # be helpful
-alias rvm="echo 'remember switching to rbenv dumbass?'"
+alias rvm="echo 'remember switching to rbenv?'"
 alias nvm=fnm
