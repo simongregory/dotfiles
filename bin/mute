@@ -1,6 +1,6 @@
 #!/usr/bin/osascript
 
- -- Mute toggle for the sytem volume
+ -- Mute toggle for the system volume
 
 set volumeSettings to get volume settings
 if output muted of volumeSettings is false then
