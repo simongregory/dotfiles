@@ -1,5 +1,7 @@
-# Time startup: 'zmodload zsh/zprof' line 1, 'zprof' on last, then:
-# time zsh -i -c exit
+# To time/debug slow startup: 'zmodload zsh/zprof' line 1, 'zprof' on last:
+#zmodload zsh/zprof
+# re-run timer with:
+#time zsh -i -c exit
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
@@ -32,6 +34,9 @@ source $ZSH/git/completion.zsh
 # prompt
 export STARSHIP_CONFIG=$HOME/.starship.toml
 eval "$(starship init zsh)"
+
+# startup time util enable along with first line
+#zprof 
 
 # bun completions
 #[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
