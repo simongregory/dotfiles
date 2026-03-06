@@ -8,14 +8,6 @@ function mkdirc {
   mkdir -p -- "$1" && cd -P -- "$1"
 }
 
-function clone-bbc {
-  git clone "https://github.com/bbc/$1" && cd "$(basename "$1" .git)"
-}
-
-function clone-ibl {
-  git clone "https://github.com/bbc/ibl-$1" && cd "$(basename "ibl-$1" .git)"
-}
-
 function clone-sg {
   git clone "https://github.com/simongregory/$1" && cd "$(basename "$1" .git)"
 }
@@ -48,8 +40,4 @@ function ffind() {
 
 function npm-install-default-global-packages() {
   cat ~/.dotfiles/fnm/default-packages | xargs npm install -g
-}
-
-function main {
-  git switch $(git rev-parse --abbrev-ref origin/HEAD | cut -c8-)
 }
