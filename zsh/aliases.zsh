@@ -3,15 +3,11 @@ alias g='git'
 alias rk='bundle exec rake'
 alias o='open'
 
-alias n='npm'
-alias nr='npm run'
-alias ns='npm run start'
-alias nb='npm run build'
-alias b='npm run build'
-alias ncb='npm run clean && npm run build'
-alias cover='npm run coverage'
-alias lint='npm run lint'
-alias clean='npm run clean'
+# n picks pnpm or npm based on context
+alias nr='n run'
+alias ns='n run start'
+alias nb='n run build'
+alias p=n
 
 alias reup='. ~/.zshrc'
 
