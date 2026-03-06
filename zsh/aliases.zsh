@@ -11,9 +11,6 @@ alias p=n
 
 alias reup='. ~/.zshrc'
 
-alias master="git checkout master"
-alias co="git checkout"
-
 # List all files colorized in long format, without groups,
 # with dot files, appending / for dirs, and displaying
 # file sizes in bytes,kb,mb and gb
