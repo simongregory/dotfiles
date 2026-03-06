@@ -47,7 +47,7 @@ alias vol=volume
 alias iplayer="open http://www.bbc.co.uk/iplayer/"
 
 # random
-alias pyserve="python -m SimpleHTTPServer"
+alias pyserve="python3 -m SimpleHTTPServer"
 alias nserve="npx http-server -c-1" #-c-1 switches off cache
 alias prettyjson="python3 -m json.tool"
 
