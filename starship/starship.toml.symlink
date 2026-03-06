@@ -1,16 +1,44 @@
+# The default location of this file would be in ~/.config/starship.toml, however
+# to bring it inline with all the other symlinks in these dotfiles it is configured
+# using to be STARSHIP_CONFIG=$HOME/.starship.toml
+#
 #format = "$all"
-# Only difference from all is the removal of
-# Donet
-
-# https://starship.rs/config/#prompt
+# Difference from format == "$all" is the removal of
+# $dotnet
+# $crystal\
+# $terraform\
+# $gcloud\
+# $openstack\
+# $azure\
+# $custom\
+# $pulumi\
+# $purescript\
+# $singularity\
+# $helm\
+# $nim\
+# $kubernetes\
+# $dart\
+# $ocaml\
+# $red\
+# $julia\
+# $rlang\
+# $vlang\
+# $vagrant\
+# $conda\
+# $scala\
+# $perl\
+# $kotlin\
+# $elixir\
+# $elm\
+# $erlang\
+# $cobol\
+# $hg_branch\
 
 format = """
 $username\
 $hostname\
 $localip\
 $shlvl\
-$singularity\
-$kubernetes\
 $directory\
 $vcsh\
 $git_branch\
@@ -18,51 +46,25 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
 $docker_context\
 $package\
 $cmake\
-$cobol\
 $container\
-$dart\
 $deno\
-$elixir\
-$elm\
-$erlang\
 $golang\
-$helm\
 $java\
-$julia\
-$kotlin\
 $lua\
-$nim\
 $nodejs\
-$ocaml\
-$perl\
 $php\
-$pulumi\
-$purescript\
 $python\
-$rlang\
-$red\
 $ruby\
 $rust\
-$scala\
 $swift\
-$terraform\
-$vlang\
-$vagrant\
 $zig\
 $nix_shell\
-$conda\
 $memory_usage\
 $aws\
-$gcloud\
-$openstack\
-$azure\
 $env_var\
-$crystal\
-$custom\
 $sudo\
 $cmd_duration\
 $line_break\
@@ -73,4 +75,4 @@ $status\
 $shell\
 $character"""
 
-command_timeout = 700
+command_timeout = 1000
