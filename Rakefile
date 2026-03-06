@@ -78,9 +78,4 @@ task :setup_vim do
  puts 'Invoke ./vim/vim_setup.sh directly (can error then get stuck requesting input when invoked via Rake)'
 end
 
-desc "Setup nvm"
-task :setup_nvm do
- `./nvm/nvm_setup.sh`
-end
-
 task :default => 'install'
