@@ -9,8 +9,8 @@
 info = `git remote -v 2>/dev/null`
 print "Not a git repository, " if info =~ /Not a git repository/
 
-remote_regex = /^origin\s+(git@|https:\/\/)github.com[:\/]([\w\d\/.-]+)(\.git)?/
-repo = info.match(remote_regex)[2] rescue ''
+remote_regex = /^origin\s+(git@|https:\/\/)(github_pat_[A-z0-9_]*@)?github.com[:\/]([\w\d\/.-]+)(\.git)?/
+repo = info.match(remote_regex)[3] rescue ''
 
 ARGV[0] = 'issues' if ARGV[0] === 'i'
 ARGV[0] = 'releases' if ARGV[0] === 'r'
