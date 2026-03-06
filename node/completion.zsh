@@ -1,5 +1,7 @@
 #eval "$(npm completion 2>/dev/null)"
-source <(npm completion)
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+  source <(npm completion)
+fi
 
 # Although handy this really kills startup time
 # for @bbc/cosmos-cli
