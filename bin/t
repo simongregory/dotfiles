@@ -1,12 +1,15 @@
 #!/bin/bash
-#TODO, recurse up the directory tree looking for build files
-#TODO, autocomplete style terminal out when a match is found
 
-if [ -f 'package.json' ]; then
+PROJ_DIR=$(git rev-parse --show-toplevel)
+
+if [ -f "$PROJ_DIR/pnpm-workspace.yaml" ]; then
+  echo "pnpm test $@"
+  pnpm test "$@"
+elif [ -f "$PROJ_DIR/package.json" ]; then
   #Using a prefix doesn't clear line and expand \r\033[K
   echo "npm test $@"
   npm test "$@"
-elif [ -f 'Rakefile' ]; then
+elif [ -f "$PROJ_DIR/Rakefile" ]; then
   echo "rake test"
   rake test
 else
