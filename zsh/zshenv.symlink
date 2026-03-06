@@ -1,5 +1,4 @@
 # editor of choice
-#export EDITOR="/usr/local/bin/mate"
 export EDITOR="/usr/local/bin/code"
 
 # tell grep to highlight matches
@@ -16,6 +15,6 @@ export PROJECTS=$HOME/code
 #alias pip=/usr/local/bin/pip3
 #alias python=/usr/local/bin/python3
 
-PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/$USER/.dotfiles/bin:$PATH"
+PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/$USER/.dotfiles/bin:$HOME/go/bin:$PATH"
 
-. "$HOME/.cargo/env"
+. "$HOME/.cargo/env"  
