@@ -41,6 +41,7 @@
 
 [push]
   default = current
+  autoSetupRemote = true
 
 [pull]
   rebase = true
@@ -48,13 +49,17 @@
 [status]
   submoduleSummary = false
 
+[gpg]
+	program = /usr/local/bin/gpg
+
 [commit]
   gpgsign = true
+
+[tag]
+	gpgSign = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[gpg]
-	program = /usr/local/bin/gpg
