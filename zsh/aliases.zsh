@@ -33,8 +33,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # in-here
-alias ipd="cd $PROJECTS/ipd/"
-alias hq="cd $PROJECTS/ipd-hq/"
 alias dot="cd ~/.dotfiles"
 alias cdot="code ~/.dotfiles/dotfiles.code-workspace"
 alias desktop="cd ~/Desktop"
