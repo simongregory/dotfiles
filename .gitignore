@@ -9,15 +9,14 @@
 !bin/bbcradio
 !bin/git-delete-local-merged
 !bin/git-prune-origin
-!bin/git-rank-contributers
+!bin/git-rank-contributors
 !bin/git-info
 !bin/git-wtf
 !bin/gitio
 !bin/hub
-!bin/jira
-!bin/jenk
 !bin/cosmos
 !bin/lyrics
+!bin/main
 !bin/mute
 !bin/t
 !bin/trav
