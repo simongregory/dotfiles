@@ -1,8 +1,23 @@
 #!/bin/bash
 
-PROJ_DIR=$(git rev-parse --show-toplevel)
+if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
+  cat <<EOF
+Usage: t [args]
 
-if [ -f "$PROJ_DIR/pnpm-workspace.yaml" ]; then
+Runs tests for the current project, auto-detecting the build system:
+  pnpm-lock.yaml  -> pnpm test [args]
+  package.json    -> npm test [args]
+  Rakefile        -> rake test
+  Cargo.toml      -> cargo test [args]
+
+Must be run from within a git repository.
+EOF
+  exit 0
+fi
+
+PROJ_DIR=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+
+if [ -f "$PROJ_DIR/pnpm-lock.yaml" ]; then
   echo "pnpm test $@"
   pnpm test "$@"
 elif [ -f "$PROJ_DIR/package.json" ]; then
@@ -12,6 +27,9 @@ elif [ -f "$PROJ_DIR/package.json" ]; then
 elif [ -f "$PROJ_DIR/Rakefile" ]; then
   echo "rake test"
   rake test
+elif [ -f "$PROJ_DIR/Cargo.toml" ]; then
+  echo "cargo test (t may need some work for --workspace detection) $@"
+  cargo test "$@"
 else
   echo "t failed, unknown build system"
 fi
