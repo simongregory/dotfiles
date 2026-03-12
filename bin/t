@@ -5,10 +5,11 @@ if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
 Usage: t [args]
 
 Runs tests for the current project, auto-detecting the build system:
-  pnpm-lock.yaml  -> pnpm test [args]
-  package.json    -> npm test [args]
-  Rakefile        -> rake test
-  Cargo.toml      -> cargo test [args]
+  pnpm-lock.yaml    -> pnpm test [args]
+  package-lock.json -> npm test [args]
+  package.json      -> (suggests pnpm/npm install first)
+  Rakefile          -> rake test
+  Cargo.toml        -> cargo test [args]
 
 Must be run from within a git repository.
 EOF
@@ -20,10 +21,13 @@ PROJ_DIR=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
 if [ -f "$PROJ_DIR/pnpm-lock.yaml" ]; then
   echo "pnpm test $@"
   pnpm test "$@"
-elif [ -f "$PROJ_DIR/package.json" ]; then
+elif [ -f "$PROJ_DIR/package-lock.json" ]; then
   #Using a prefix doesn't clear line and expand \r\033[K
   echo "npm test $@"
   npm test "$@"
+elif [ -f "$PROJ_DIR/package.json" ]; then
+  echo "No lockfile found. Run 'pnpm install' or 'npm install' first."
+  exit 1
 elif [ -f "$PROJ_DIR/Rakefile" ]; then
   echo "rake test"
   rake test
