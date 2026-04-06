@@ -72,10 +72,4 @@ task :setup_vscode do
   `./vscode/vscode_setup.sh`
 end
 
-desc "Setup vim"
-task :setup_vim do
- #`./vim/vim_setup.sh`
- puts 'Invoke ./vim/vim_setup.sh directly (can error then get stuck requesting input when invoked via Rake)'
-end
-
 task :default => 'install'
