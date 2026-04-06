@@ -76,3 +76,9 @@ $shell\
 $character"""
 
 command_timeout = 1000
+
+[directory]
+truncation_length = 2           # Show only the last 2 path components
+truncate_to_repo = true         # Truncate to git repo root (overrides length)
+#truncation_symbol = "…/"       # Symbol shown when path is truncated
+#fish_style_pwd_dir_length = 1
