@@ -3,7 +3,6 @@ BUNDLES="$HOME/Library/Application Support/Avian/Bundles"
 mkdir -p "$BUNDLES"
 cd "$BUNDLES"
 
-#git clone https://github.com/jashkenas/coffee-script-tmbundle.git CoffeeScript.tmbundle
 git clone https://github.com/bomberstudios/Strip-Whitespace-On-Save.tmbundle.git Strip-Whitespace-On-Save.tmbundle
 git clone https://github.com/rspec/rspec-tmbundle.git RSpec.tmbundle
 git clone https://github.com/cucumber/cucumber-tmbundle.git Cucumber.tmbundle
