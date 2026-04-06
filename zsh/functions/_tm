@@ -1,2 +1,0 @@
-#compdef tm
-_files -W ~/Library/Application\ Support/Avian/Bundles/ -/

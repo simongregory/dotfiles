@@ -1,3 +1,0 @@
-#compdef tv
-
-compadd `tv help -c`

@@ -1,4 +1,0 @@
-#compdef weather
-
-compadd `weather help -c`
-
