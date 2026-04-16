@@ -1,8 +1,59 @@
-#compdef rake
-if [ -f Rakefile ]; then
-  recent=`last_modified .rake_tasks~ Rakefile **/*.rake`
-  if [[ $recent != '.rake_tasks~' ]]; then
-    rake --silent --tasks | cut -d " " -f 2 > .rake_tasks~
+#compdef rake rk
+
+_rake() {
+  setopt local_options null_glob
+
+  local -a sources stat raw_lines task_specs
+  local source line task desc
+  local cache_root=${XDG_CACHE_HOME:-$HOME/.zsh/cache}/rake
+  local cache_key=${PWD:A//\//%}
+  local cache_file=$cache_root/$cache_key.tasks
+  local stamp_file=$cache_root/$cache_key.mtime
+  local latest_mtime=0 cached_mtime=0
+
+  (( $+commands[rake] )) || return 1
+
+  sources=(
+    Rakefile(N)
+    rakefile(N)
+    Rakefile.rb(N)
+    **/*.rake(N)
+  )
+  (( $#sources )) || return 1
+
+  zmodload zsh/stat b:zstat || return 1
+
+  for source in $sources; do
+    zstat -A stat +mtime -- "$source" 2>/dev/null || continue
+    (( stat[1] > latest_mtime )) && latest_mtime=$stat[1]
+  done
+
+  [[ -r $stamp_file ]] && cached_mtime=$(<$stamp_file)
+
+  if [[ ! -r $cache_file || $cached_mtime != $latest_mtime ]]; then
+    mkdir -p -- "$cache_root" || return 1
+    raw_lines=(${(f)"$(rake --silent --tasks 2>/dev/null)"}) || return 1
+    print -rl -- $raw_lines >| "$cache_file" || return 1
+    print -r -- "$latest_mtime" >| "$stamp_file" || return 1
+  else
+    raw_lines=(${(f)"$(<$cache_file)"})
   fi
-  compadd `cat .rake_tasks~`
-fi
+
+  for line in $raw_lines; do
+    task=${${line%%#*}#rake }
+    task=${task%% ##}
+    [[ -n $task ]] || continue
+
+    if [[ $line == *'# '* ]]; then
+      desc=${line#*# }
+      task_specs+=("${task}:${desc}")
+    else
+      task_specs+=("${task}:${task}")
+    fi
+  done
+
+  (( $#task_specs )) || return 1
+  _describe -t rake-tasks 'rake task' task_specs
+}
+
+_rake "$@"
