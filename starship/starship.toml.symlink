@@ -2,37 +2,6 @@
 # to bring it inline with all the other symlinks in these dotfiles it is configured
 # using to be STARSHIP_CONFIG=$HOME/.starship.toml
 #
-#format = "$all"
-# Difference from format == "$all" is the removal of
-# $dotnet
-# $crystal\
-# $terraform\
-# $gcloud\
-# $openstack\
-# $azure\
-# $custom\
-# $pulumi\
-# $purescript\
-# $singularity\
-# $helm\
-# $nim\
-# $kubernetes\
-# $dart\
-# $ocaml\
-# $red\
-# $julia\
-# $rlang\
-# $vlang\
-# $vagrant\
-# $conda\
-# $scala\
-# $perl\
-# $kotlin\
-# $elixir\
-# $elm\
-# $erlang\
-# $cobol\
-# $hg_branch\
 
 format = """
 $username\
