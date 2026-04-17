@@ -51,6 +51,7 @@
 !win
 !win/Microsoft.PowerShell_profile.ps1
 !zsh
+!zsh/bindings.zsh
 !zsh/config.zsh
 !zsh/completions.zsh
 !zsh/ZSH.md
