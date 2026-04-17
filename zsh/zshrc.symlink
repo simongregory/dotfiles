@@ -1,48 +1,45 @@
-# To time/debug slow startup: 'zmodload zsh/zprof' line 1, 'zprof' on last:
-#zmodload zsh/zprof
-# re-run timer with:
-#time zsh -i -c exit
-
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
 # Load colours so we don't have to remember the crazy codes
-autoload -U colors
-colors
-setopt prompt_subst
+#autoload -U colors
+#colors
+#setopt prompt_subst
 
-#⚡ ✖ ✔
+# Ensure brew is setup before loading completions
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Typeahead completions
+source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Load in config files
 source $ZSH/secret/secret.zsh
 source $ZSH/zsh/config.zsh
+source $ZSH/zsh/bindings.zsh
 source $ZSH/zsh/functions.zsh
 source $ZSH/zsh/completions.zsh
 source $ZSH/zsh/aliases.zsh
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-#fast node manager
+# fast node manager
 eval "$(fnm env --use-on-cd)"
-
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-  # load completions after autocomplete loads
-  source $ZSH/node/completion.zsh
-  source $ZSH/git/completion.zsh
-fi
 
 # prompt
 export STARSHIP_CONFIG=$HOME/.starship.toml
 eval "$(starship init zsh)"
 
-# startup time util enable along with first line
-#zprof 
+# -----------
+# zsh plugins
 
-# bun completions
-#[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+# Zoxide is a better cd, ensure this loads after compinit
+eval "$(zoxide init zsh)"
 
-# bun
-#export BUN_INSTALL="$HOME/.bun"
-#export PATH="$BUN_INSTALL/bin:$PATH"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Automatically insert paired chars ie " => "|"
+source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+
+# Syntax highlighting (must come last)
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# History substring search (after syntax highlighting, even though that has to be last...)
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh

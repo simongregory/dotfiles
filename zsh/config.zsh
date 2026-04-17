@@ -9,26 +9,21 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt NO_BG_NICE # don't nice background tasks
-setopt NO_HUP
-setopt NO_LIST_BEEP
-setopt LOCAL_OPTIONS # allow functions to have local options
-setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
-setopt SHARE_HISTORY # share history between sessions ???
-setopt EXTENDED_HISTORY # add timestamps to history
-setopt PROMPT_SUBST
-setopt CORRECT
-setopt COMPLETE_IN_WORD
-setopt IGNORE_EOF
+setopt NO_BG_NICE # run background jobs at normal priority
+setopt NO_HUP # don't send SIGHUP to jobs when the shell exits
+setopt NO_LIST_BEEP # don't beep when completion shows a list of matches
+setopt LOCAL_OPTIONS # keep option changes local to functions
+setopt LOCAL_TRAPS # keep trap changes local to functions
 
-setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
-setopt HIST_REDUCE_BLANKS
+setopt PROMPT_SUBST # allow expansion inside prompt strings
+setopt CORRECT # offer spelling correction for commands
+setopt COMPLETE_IN_WORD # complete at the cursor, not just at the end of the word
+setopt IGNORE_EOF # don't let Ctrl-D immediately exit the shell
 
-# don't expand aliases _before_ completion has finished
-#   like: git comm-[tab]
-#setopt complete_aliases
+setopt HIST_VERIFY # show history expansions in the buffer before executing them
+setopt EXTENDED_HISTORY # store timestamps with history entries
+setopt SHARE_HISTORY # import and share history across running shells
+setopt HIST_IGNORE_ALL_DUPS # keep only the newest copy of duplicate history entries
+setopt HIST_REDUCE_BLANKS # trim superfluous blanks before saving history
 
-zle -N newtab
+setopt COMPLETE_ALIASES # complete alias names before expanding them
